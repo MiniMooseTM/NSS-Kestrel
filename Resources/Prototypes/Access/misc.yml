@@ -38,6 +38,9 @@
   - GenpopLeave
   - Robotics #Goob
   - Journalism #Goob
+  - Paramedic #Kestrel
+  - Virology #Kestrel
+  - Surgery #Kestrel
 
 - type: accessGroup
   id: General

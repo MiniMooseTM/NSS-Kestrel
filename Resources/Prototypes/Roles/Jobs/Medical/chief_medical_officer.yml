@@ -40,6 +40,8 @@
   - ChiefMedicalOfficer
   - Brig
   - Cryogenics
+  - Paramedic # Kestrel
+  - Virology # Kestrel
   - External # goobstation
   special:
   - !type:AddImplantSpecial

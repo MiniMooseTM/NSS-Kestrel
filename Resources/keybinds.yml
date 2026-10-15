@@ -670,3 +670,6 @@ binds:
   type: State
   key: MouseRight
   canFocus: true
+- function: copypaste
+  type: Command
+  key: F12

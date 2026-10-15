@@ -1,286 +1,111 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/789a362bc55d2d6331bc89699bb4f9f792695853/icons/obj/structures/props/platforms.dmi, https://github.com/cmss13-devs/cmss13/blob/48e570bd697f2476e28d89cd255d0539a5228228/icons/obj/structures/props/platforms.dmi",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-      "name": "platform",
-      "directions": 4
-    },
-    {
-      "name": "platform_corner",
-      "directions": 4
-    },
-    {
-      "name": "platform_stair",
-      "directions": 4
-    },
-    {
-      "name": "platform_stair_alt",
-      "directions": 4
-    },
-    {
-      "name": "platform_deco",
-      "directions": 4
-    },
-    {
-      "name": "platform_round",
-      "directions": 4
-    },
-    {
-      "name": "strata_platform",
-      "directions": 4
-    },
-    {
-      "name": "strata_platform_deco",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_stair",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_stair_alt",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_deco",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform2",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_deco2",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform3",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_deco3",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_deco",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rock",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rock_deco",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm_corner",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm_round",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm_deco",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm_stair",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_sm_stair_alt",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_stair_plate"
-    },
-    {
-      "name": "stone",
-      "directions": 4
-    },
-    {
-      "name": "stone_deco",
-      "directions": 4
-    },
-    {
-      "name": "stone_stair",
-      "directions": 4
-    },
-    {
-      "name": "stone_stair_alt",
-      "directions": 4
-    },
-    {
-      "name": "sandstone",
-      "directions": 4
-    },
-    {
-      "name": "sandstone_deco",
-      "directions": 4
-    },
-    {
-      "name": "shiva",
-      "directions": 4
-    },
-    {
-      "name": "shiva_deco",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rockdark",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rock_decodark",
-      "directions": 4
-    },
-    {
-      "name": "hybrisametal",
-      "directions": 4
-    },
-    {
-      "name": "hybrisametal_deco",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform_deco",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform2",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform_deco2",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform3",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform3_stair",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform3_stair_alt",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform3_corner",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform_deco3",
-      "directions": 4
-    },
-    {
-      "name": "engineer_platform",
-      "directions": 4
-    },
-    {
-      "name": "engineer_platform_deco",
-      "directions": 4
-    },
-    {
-      "name": "platform_broken",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_platform_broken",
-      "directions": 4
-    },
-    {
-      "name": "hunter_platform_broken",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform3_broken",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform2_broken",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform2_broken",
-      "directions": 4
-    },
-    {
-      "name": "hybrisaplatform_broken",
-      "directions": 4
-    },
-    {
-      "name": "hybrisametal_broken",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform3_broken",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rockdark_broken",
-      "directions": 4
-    },
-    {
-      "name": "sandstone_broken",
-      "directions": 4
-    },
-    {
-      "name": "stone_broken",
-      "directions": 4
-    },
-    {
-      "name": "kutjevo_rock_broken",
-      "directions": 4
-    },
-    {
-      "name": "strata_platform_broken",
-      "directions": 4
-    },
-    {
-      "name": "shiva_broken",
-      "directions": 4
-    },
-    {
-      "name": "strata_metalplatform_broken",
-      "directions": 4
-    },
-    {
-      "name": "strata_rock_platform",
-      "directions": 4
-    },
-    {
-      "name": "strata_rock_platform_deco",
-      "directions": 4
-    },
-    {
-      "name": "strata_rock_platform_broken",
-      "directions": 4
-    }
-  ]
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Aurora.3 at https://github.com/Aurorastation/Aurora.3/blob/50e7bfcd8035761ae340d7d3aedb8e49414148d2/icons/obj/structure/platforms.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "platform",
+            "directions": 4
+        },
+        {
+            "name": "platform_deco",
+            "directions": 8
+        },
+        {
+            "name": "ledge",
+            "directions": 4
+        },
+        {
+            "name": "ledge_deco",
+            "directions": 8
+        },
+        {
+            "name": "platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "platform_dark",
+            "directions": 4
+        },
+        {
+            "name": "platform_deco_dark",
+            "directions": 8
+        },
+        {
+            "name": "ledge_dark",
+            "directions": 4
+        },
+        {
+            "name": "ledge_deco_dark",
+            "directions": 8
+        },
+        {
+            "name": "platform_cutout_dark",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt_deco",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt_cutout",
+            "directions": 4
+        },
+        {
+            "name": "engineer_platform",
+            "directions": 4
+        },
+        {
+            "name": "engineer_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "accented_platform",
+            "directions": 4
+        },
+        {
+            "name": "accented_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "column_platform",
+            "directions": 4
+        },
+        {
+            "name": "column_platform_deco",
+            "directions": 8
+        },
+        {
+            "name": "column_platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "colorable_rock_platform",
+            "directions": 4
+        },
+        {
+            "name": "colorable_rock_platform_deco",
+            "directions": 4
+        }
+    ]
 }

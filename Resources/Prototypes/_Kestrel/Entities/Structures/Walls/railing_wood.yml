@@ -1,0 +1,208 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: wooden variants of the metal railing.
+# Each piece inherits its shape and collision from the matching metal railing,
+# then swaps in wood art, wood damage, plank drops, and flammability.
+
+- type: entity
+  parent: Railing
+  id: RailingWood
+  name: wooden railing
+  description: A wooden railing. Keeps people from wandering where they shouldn't, as long as nobody sets it on fire.
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Icon
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3 # per second, scales with number of fire stacks
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 15 # metal railing breaks at 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: RailingWood
+    node: railing
+
+- type: entity
+  parent: RailingCorner
+  id: RailingWoodCorner
+  name: wooden railing corner
+  description: A wooden railing corner. Keeps people from wandering where they shouldn't, as long as nobody sets it on fire.
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Icon
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3 # per second, scales with number of fire stacks
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 15 # metal railing breaks at 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 0
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: RailingWood
+    node: railingCorner
+
+- type: entity
+  parent: RailingCornerSmall
+  id: RailingWoodCornerSmall
+  name: small wooden railing corner
+  description: A small wooden railing corner. Keeps people from wandering where they shouldn't, as long as nobody sets it on fire.
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Icon
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3 # per second, scales with number of fire stacks
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 15 # metal railing breaks at 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: RailingWood
+    node: railingCornerSmall
+
+- type: entity
+  parent: RailingRound
+  id: RailingWoodRound
+  name: round wooden railing
+  description: A rounded wooden railing. Keeps people from wandering where they shouldn't, as long as nobody sets it on fire.
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Icon
+    sprite: _Kestrel/Structures/Walls/railing_wood.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3 # per second, scales with number of fire stacks
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 15 # metal railing breaks at 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 0
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: RailingWood
+    node: railingRound

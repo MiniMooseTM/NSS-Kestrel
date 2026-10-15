@@ -1,0 +1,53 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: crafting menu entries for the wooden railing.
+
+- type: construction
+  id: RailingWood
+  graph: RailingWood
+  startNode: start
+  targetNode: railing
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCorner
+  name: construction-recipe-railing-wood-corner
+  graph: RailingWood
+  startNode: start
+  targetNode: railingCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCornerSmall
+  name: construction-recipe-railing-wood-corner-small
+  graph: RailingWood
+  startNode: start
+  targetNode: railingCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodRound
+  name: construction-recipe-railing-wood-round
+  graph: RailingWood
+  startNode: start
+  targetNode: railingRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

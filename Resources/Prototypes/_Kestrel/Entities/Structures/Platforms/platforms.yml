@@ -1,0 +1,273 @@
+﻿# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Kestrel platforms. Sprites: Resources/Textures/_Kestrel/Structures/platforms.rsi
+# (Aurora.3, CC-BY-SA-3.0 - see that folder's meta.json).
+#
+# Aurora's sprites draw the edge on the NORTH side of the tile in their south-facing
+# frame, the opposite of RMC's. So these use their own bases with the hitbox on the
+# north side instead of parenting CMPlatform directly.
+
+# ---------------------------------------------------------------- bases
+
+- type: entity
+  abstract: true
+  parent: CMPlatformBaseDestructible   # climbable, damageable, breakable (from _RMC14)
+  id: KestrelPlatformBase
+  name: platform
+  description: A raised section of deck plating. You could probably climb it.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/platforms.rsi
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,0.36,0.49,0.49"   # thin strip along the north edge
+        density: 1500
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+
+# Corner caps and decorations: purely visual, no collision.
+- type: entity
+  abstract: true
+  parent: CMPlatformBase
+  id: KestrelPlatformDecoBase
+  name: platform corner
+  description: The corner of a raised section of deck plating.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/platforms.rsi
+  - type: Climbable
+    delay: 0.25
+
+# ---------------------------------------------------------------- standard
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatform
+  components:
+  - type: Sprite
+    state: platform
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformCutout
+  components:
+  - type: Sprite
+    state: platform_cutout
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformDeco
+  components:
+  - type: Sprite
+    state: platform_deco
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformDark
+  components:
+  - type: Sprite
+    state: platform_dark
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformCutoutDark
+  components:
+  - type: Sprite
+    state: platform_cutout_dark
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformDecoDark
+  components:
+  - type: Sprite
+    state: platform_deco_dark
+
+# ---------------------------------------------------------------- ledge
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelLedge
+  name: ledge
+  description: A low raised ledge.
+  components:
+  - type: Sprite
+    state: ledge
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelLedgeDeco
+  name: ledge corner
+  components:
+  - type: Sprite
+    state: ledge_deco
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelLedgeDark
+  name: ledge
+  description: A low raised ledge.
+  components:
+  - type: Sprite
+    state: ledge_dark
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelLedgeDecoDark
+  name: ledge corner
+  components:
+  - type: Sprite
+    state: ledge_deco_dark
+
+# ---------------------------------------------------------------- metal
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformMetal
+  name: raised metal platform
+  components:
+  - type: Sprite
+    state: metal_platform
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformMetalCutout
+  name: raised metal platform
+  components:
+  - type: Sprite
+    state: metal_platform_cutout
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformMetalDeco
+  name: raised metal corner
+  components:
+  - type: Sprite
+    state: metal_platform_deco
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformMetalAlt
+  name: raised metal platform
+  components:
+  - type: Sprite
+    state: metal_platform_alt
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformMetalAltCutout
+  name: raised metal platform
+  components:
+  - type: Sprite
+    state: metal_platform_alt_cutout
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformMetalAltDeco
+  name: raised metal corner
+  components:
+  - type: Sprite
+    state: metal_platform_alt_deco
+
+# ---------------------------------------------------------------- engineering / accented
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformEngineer
+  name: engineering platform
+  components:
+  - type: Sprite
+    state: engineer_platform
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformEngineerDeco
+  name: engineering platform corner
+  components:
+  - type: Sprite
+    state: engineer_platform_deco
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformAccented
+  name: accented platform
+  components:
+  - type: Sprite
+    state: accented_platform
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformAccentedDeco
+  name: accented platform corner
+  components:
+  - type: Sprite
+    state: accented_platform_deco
+
+# ---------------------------------------------------------------- column
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformColumn
+  name: column platform
+  components:
+  - type: Sprite
+    state: column_platform
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformColumnCutout
+  name: column platform
+  components:
+  - type: Sprite
+    state: column_platform_cutout
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformColumnDeco
+  name: column platform corner
+  components:
+  - type: Sprite
+    state: column_platform_deco
+
+# ---------------------------------------------------------------- rock (greyscale: tint with color)
+
+- type: entity
+  parent: KestrelPlatformBase
+  id: KestrelPlatformRock
+  name: raised rock edge
+  description: A pile of rock marking a change in elevation. You could probably climb it.
+  components:
+  - type: Sprite
+    state: colorable_rock_platform
+  - type: Physics
+    bodyType: Static
+
+- type: entity
+  parent: KestrelPlatformDecoBase
+  id: KestrelPlatformRockDeco
+  name: raised rock corner
+  components:
+  - type: Sprite
+    state: colorable_rock_platform_deco
+
+# Example tinted variant. Copy and change the color for others.
+- type: entity
+  parent: KestrelPlatformRock
+  id: KestrelPlatformRockSandstone
+  name: raised sandstone edge
+  components:
+  - type: Sprite
+    color: "#b29082"

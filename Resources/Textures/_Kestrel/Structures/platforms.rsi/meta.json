@@ -1,0 +1,111 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Aurora.3 at https://github.com/Aurorastation/Aurora.3/blob/50e7bfcd8035761ae340d7d3aedb8e49414148d2/icons/obj/structure/platforms.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "platform",
+            "directions": 4
+        },
+        {
+            "name": "platform_deco",
+            "directions": 8
+        },
+        {
+            "name": "ledge",
+            "directions": 4
+        },
+        {
+            "name": "ledge_deco",
+            "directions": 8
+        },
+        {
+            "name": "platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "platform_dark",
+            "directions": 4
+        },
+        {
+            "name": "platform_deco_dark",
+            "directions": 8
+        },
+        {
+            "name": "ledge_dark",
+            "directions": 4
+        },
+        {
+            "name": "ledge_deco_dark",
+            "directions": 8
+        },
+        {
+            "name": "platform_cutout_dark",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt_deco",
+            "directions": 4
+        },
+        {
+            "name": "metal_platform_alt_cutout",
+            "directions": 4
+        },
+        {
+            "name": "engineer_platform",
+            "directions": 4
+        },
+        {
+            "name": "engineer_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "accented_platform",
+            "directions": 4
+        },
+        {
+            "name": "accented_platform_deco",
+            "directions": 4
+        },
+        {
+            "name": "column_platform",
+            "directions": 4
+        },
+        {
+            "name": "column_platform_deco",
+            "directions": 8
+        },
+        {
+            "name": "column_platform_cutout",
+            "directions": 4
+        },
+        {
+            "name": "colorable_rock_platform",
+            "directions": 4
+        },
+        {
+            "name": "colorable_rock_platform_deco",
+            "directions": 4
+        }
+    ]
+}

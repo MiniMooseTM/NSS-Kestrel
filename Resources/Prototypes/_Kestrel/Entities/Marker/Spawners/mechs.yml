@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: Odysseus Spawner
+  id: SpawnMechOdysseus
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: odysseus
+  - type: ConditionalSpawner
+    prototypes:
+      - MechOdysseusBattery

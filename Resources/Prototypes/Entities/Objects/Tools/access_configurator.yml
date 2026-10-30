@@ -44,7 +44,7 @@
       - Maintenance
       - Medical
       - Paramedic # Kestrel
-      - Virology
+      - Virology # Kestrel
       - Quartermaster
       - Research
       - Robotics # goobstation
@@ -53,6 +53,7 @@
       - Salvage
       - Security
       - Service
+      - Surgery # Kestrel
       - Theatre
       - GenpopEnter
       - GenpopLeave
@@ -122,6 +123,9 @@
     - Lawyer
     - Maintenance
     - Medical
+    - Paramedic # Kestrel
+    - Virology # Kestrel
+    - Surgery # Kestre;
     - Quartermaster
     - Research
     - ResearchDirector

@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: reinforced version of the tinted window.
+# Inherits everything from ReinforcedWindow (health, damage resistances, shards,
+# welder deconstruction), then adds the three pieces that make TintedWindow tintable.
+
+- type: entity
+  parent: ReinforcedWindow
+  id: ReinforcedTintedWindow
+  name: reinforced tinted window
+  description: Reinforced smart glass that can be switched between clear and opaque.
+  components:
+  # Art: the tinted sprite is the reinforced sprite with darker glass, so it fits as-is.
+  - type: Sprite
+    sprite: Structures/Windows/tinted_window.rsi
+  - type: Icon
+    sprite: Structures/Windows/tinted_window.rsi
+  - type: IconSmooth
+    base: twindow # tinted_window.rsi names its states twindow0-7 instead of rwindow0-7
+  # Tinting: copied from TintedWindow in Entities/Structures/Windows/window.yml.
+  - type: Occluder # blocks vision, like a wall
+  - type: ToggleableOccluder # lets signals turn the Occluder on and off
+  - type: DeviceLinkSink # shows the On/Off/Toggle ports when linking with a multitool
+    ports:
+    - On
+    - Off
+    - Toggle
+
+- type: entity
+  parent: ReinforcedTintedWindow
+  id: ReinforcedTintedWindowTransparent
+  suffix: Transparent
+  components:
+  - type: Occluder
+    enabled: false # starts see-through; a signal can still darken it

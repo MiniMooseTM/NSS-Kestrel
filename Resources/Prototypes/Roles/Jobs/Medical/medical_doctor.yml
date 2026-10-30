@@ -16,12 +16,13 @@
   - MedicalDoctor
   - Medical
   - Medicine
+  - Virology
   goobcoins: 20 #Goob content
   access:
   - Medical
   - Maintenance
   extendedAccess:
-  - Chemistry
+  - Virology
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: DoctorDay

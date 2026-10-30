@@ -12,6 +12,7 @@
       - Zombie
       - ZombieBlob
   - type: MechAir
+  - type: MechEntrySound
   - type: AirFilter
     # everything except oxygen and nitrogen
     gases:

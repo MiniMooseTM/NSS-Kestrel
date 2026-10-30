@@ -89,7 +89,8 @@
           layer:
           - AirlockLayer
     - type: Door
-      openDrawDepth: WallTops
+      openDrawDepth: HighFloorObjects # Kestrel - This was WallTops; open firelocks should sit under windows and then close over them.
+      closedDrawDepth: Overdoors #Kestrel - Was doors, but this ensure it'll close over the window. Visual preference.
       closeTimeOne: 0.1
       closeTimeTwo: 0.6
       openTimeOne: 0.1

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Robust.Shared.ComponentTrees; // Kestrel
 using Robust.Shared.GameStates;
+using Robust.Shared.Physics; // Kestrel
 
 namespace Content.Shared.Wall;
 
@@ -11,8 +13,9 @@ namespace Content.Shared.Wall;
 ///     This will only exempt anchored entities that intersect the wall-mount. Additionally, this exemption will apply
 ///     in a limited arc, providing basic functionality for directional wall mounts.
 /// </remarks>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class WallMountComponent : Component
+// Kestrel: raiseAfterAutoHandleState and IComponentTreeEntry added for directional visibility (upstream port).
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(raiseAfterAutoHandleState: true)]
+public sealed partial class WallMountComponent : Component, IComponentTreeEntry<WallMountComponent>
 {
     /// <summary>
     ///     Range of angles for which the exemption applies. Bigger is more permissive.
@@ -27,4 +30,27 @@ public sealed partial class WallMountComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("direction"), AutoNetworkedField]
     public Angle Direction = Angle.Zero;
+
+    // Kestrel start: directional visibility, ported from upstream.
+    /// <summary>
+    ///     If true, the sprite is only visible from within the facing <see cref="Arc"/>.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool DirectionalVisibility = true;
+
+    /// <inheritdoc/>
+    [ViewVariables]
+    public EntityUid? TreeUid { get; set; }
+
+    /// <inheritdoc/>
+    [ViewVariables]
+    public DynamicTree<ComponentTreeEntry<WallMountComponent>>? Tree { get; set; }
+
+    /// <inheritdoc/>
+    [ViewVariables]
+    public bool AddToTree => Arc < Math.Tau && DirectionalVisibility;
+
+    /// <inheritdoc/>
+    public bool TreeUpdateQueued { get; set; }
+    // Kestrel end
 }

@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: puts the reinforced tinted window in the construction menu (Structures tab).
+# Copied from the TintedWindow recipe in Recipes/Construction/structures.yml.
+
+- type: construction
+  id: ReinforcedTintedWindow
+  graph: ReinforcedTintedWindow
+  startNode: start
+  targetNode: reinforcedTintedWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false

@@ -1,0 +1,44 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: build and deconstruct steps for the reinforced tinted window.
+# Modeled on the reinforcedWindow node in Recipes/Construction/Graphs/structures/window.yml.
+
+- type: constructionGraph
+  id: ReinforcedTintedWindow
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: reinforcedTintedWindow
+          steps:
+            - material: ReinforcedGlass
+              amount: 2
+              doAfter: 2
+            - material: Cable # the "smart glass" wiring
+              amount: 1
+              doAfter: 1
+
+    - node: reinforcedTintedWindow
+      entity: ReinforcedTintedWindow
+      edges:
+        - to: start
+          completed: # refunds everything it cost
+            - !type:GivePrototype
+              prototype: SheetRGlass1
+              amount: 2
+            - !type:GivePrototype
+              prototype: CableApcStack1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps: # same tool order as a regular reinforced window
+            - tool: Welding
+              doAfter: 5
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 2
+            - tool: Welding
+              doAfter: 5
+            - tool: Screwing
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 2

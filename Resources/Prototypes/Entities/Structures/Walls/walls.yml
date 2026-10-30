@@ -27,6 +27,7 @@
   - type: Tag
     tags:
     - Wall
+  - type: Wall # Kestrel - marks walls for directional wall-mount visibility (upstream port)
   - type: IsRoof
   - type: Sprite
     drawdepth: Walls

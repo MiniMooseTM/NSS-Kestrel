@@ -1,0 +1,66 @@
+﻿# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: Tag
+  id: MedicalMech
+
+- type: entity
+  id: MedicalMech
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Mech
+    equipmentWhitelist:
+      tags:
+      - MedicalMech
+
+- type: entity
+  id: MechOdysseus
+  parent: [ BaseMech, MedicalMech ]
+  name: Odysseus
+  description: A light medical exosuit built to get paramedics to patients fast.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Objects/Specific/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: odysseus
+  - type: Mech
+    baseState: odysseus
+    openState: odysseus-open
+    brokenState: odysseus-broken
+    airtight: true
+    maxIntegrity: 250                 # mech HP. BaseMech default is 250
+    mechToPilotDamageMultiplier: 0.7  # share of damage that reaches the pilot (0 = none, 1 = all)
+    maxEquipmentAmount: 4             # tool slots. Default is 3
+    entryDelay: 3                     # seconds to climb in
+    exitDelay: 3                      # seconds to climb out
+    pilotWhitelist:
+      components:
+      - HumanoidAppearance
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5                # BaseMech is 1; crew walk ~2.5
+    baseSprintSpeed: 3.5
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 26
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+      params:
+        pitch: 1.4 #1 is normal
+  - type: StaticPrice
+    price: 1500
+- type: entity
+  id: MechOdysseusBattery
+  parent: MechOdysseus
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh

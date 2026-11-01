@@ -1470,7 +1470,9 @@
   name: loadout-group-brigmedic-jumpsuit
   loadouts:
   - BrigmedicJumpsuit
+  - BrigmedicJumpsuitNavy # Kestrel
   - BrigmedicJumpskirt
+  - BrigmedicJumpskirtNavy # Kestrel
   - BrigmedicMJ
 
 - type: loadoutGroup
@@ -1481,7 +1483,10 @@
   - BrigmedicBeret
   - CMOMedicalHeadMirror
   - SecurityBeret
+  - SecurityBeretNavy # Kestrel
   - SecurityHat
+  - SecurityHatNavy # Kestrel
+  - SecurityHatBlack # Kestrel
   - TrooperHat
 
 - type: loadoutGroup
@@ -1489,9 +1494,11 @@
   name: loadout-group-brigmedic-outer
   loadouts:
   - BrigmedicAMG
+  - BrigmedicAMGNavy # Kestrel
   - ArmorVest
   - ArmorVestSlim
   - SecurityOfficerWintercoat
+  - SecurityOfficerWintercoatNavy # Kestrel
 
 - type: loadoutGroup
   id: BrigmedicJobTrinkets
@@ -1548,7 +1555,7 @@
   name: loadout-group-security-gloves
   loadouts:
   - BlackGloves
-  - RedGloves
+  # - RedGloves # Kestrel: removed, security uses black gloves
   - FingerlessGloves
 
 # Zookeeper

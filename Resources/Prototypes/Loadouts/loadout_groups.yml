@@ -1301,7 +1301,9 @@
   name: loadout-group-head-of-security-jumpsuit
   loadouts:
   - HeadofSecurityJumpsuit
+  - HeadofSecurityJumpsuitNavy # Kestrel
   - HeadofSecurityJumpskirt
+  - HeadofSecurityJumpskirtNavy # Kestrel
   - HeadofSecurityTurtleneck
   - HeadofSecurityTurtleneckSkirt
   - HeadofSecurityFormalSuit
@@ -1349,7 +1351,9 @@
   name: loadout-group-warden-jumpsuit
   loadouts:
   - WardenJumpsuit
+  - WardenJumpsuitNavy # Kestrel
   - WardenJumpskirt
+  - WardenJumpskirtNavy # Kestrel
   - WardenMJ # goob
 
 - type: loadoutGroup
@@ -1357,7 +1361,9 @@
   name: loadout-group-warden-outerclothing
   loadouts:
   - WardenCoat
+  - WardenCoatNavy # Kestrel
   - WardenArmoredWinterCoat
+  - WardenArmoredWinterCoatNavy # Kestrel
   - WardenCoatBlue #goob
 
 - type: loadoutGroup
@@ -1376,7 +1382,10 @@
   - SecurityHelmet
   - SecurityHelmetAlt # Goobstation
   - SecurityBeret
+  - SecurityBeretNavy # Kestrel
   - SecurityHat
+  - SecurityHatNavy # Kestrel
+  - SecurityHatBlack # Kestrel
   - TrooperHat
 
 - type: loadoutGroup
@@ -1384,7 +1393,9 @@
   name: loadout-group-security-jumpsuit
   loadouts:
   - SecurityJumpsuit
+  - SecurityJumpsuitNavy # Kestrel
   - SecurityJumpskirt
+  - SecurityJumpskirtNavy # Kestrel
   - SecurityJumpsuitGrey
   - SecurityJumpskirtGrey
   - SeniorOfficerJumpsuit
@@ -1418,6 +1429,7 @@
   - ArmorVest
   - ArmorVestSlim
   - SecurityOfficerWintercoat
+  - SecurityOfficerWintercoatNavy # Kestrel
   - WinterCoatSeniorSecArmored # Goobstation
   - VeteranOfficerArmor # Goobstation
 
@@ -1489,9 +1501,11 @@
   id: SecurityCadetJumpsuit
   name: loadout-group-security-cadet-jumpsuit
   loadouts:
-  - RedJumpsuit
-  - RedJumpskirt
-  - RedMJ #Goob
+  - SecurityCadetJumpsuitMidnight # Kestrel: was RedJumpsuit (generic red)
+  - SecurityCadetJumpsuitNavy # Kestrel
+  - SecurityCadetJumpskirtMidnight # Kestrel: was RedJumpskirt (generic red)
+  - SecurityCadetJumpskirtNavy # Kestrel
+  - SecurityCadetMJMidnight # Kestrel: was RedMJ (generic red)
 
 - type: loadoutGroup
   id: SecurityCadetJobTrinkets

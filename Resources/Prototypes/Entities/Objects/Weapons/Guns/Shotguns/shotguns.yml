@@ -225,6 +225,14 @@
     autoCycle: false
 
 - type: entity
+  parent: WeaponShotgunKammerer
+  id: WeaponShotgunKammererBeanbag #Kestrel
+  suffix: Non-Lethal
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgunBeanbag
+
+- type: entity
   name: sawn-off shotgun
   parent: [ BaseWeaponShotgun, BaseSecurityBartenderContraband ]
   id: WeaponShotgunSawn

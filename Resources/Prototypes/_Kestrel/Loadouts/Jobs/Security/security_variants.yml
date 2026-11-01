@@ -1,0 +1,78 @@
+# Kestrel: loadout entries for the alternate-color security clothing variants.
+
+- type: loadout
+  id: SecurityJumpsuitNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecNavy
+
+- type: loadout
+  id: SecurityJumpskirtNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSecNavy
+
+- type: loadout
+  id: WardenJumpsuitNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWardenNavy
+
+- type: loadout
+  id: WardenJumpskirtNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtWardenNavy
+
+- type: loadout
+  id: HeadofSecurityJumpsuitNavy
+  groupBy: jumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSNavy
+
+- type: loadout
+  id: HeadofSecurityJumpskirtNavy
+  groupBy: jumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHoSNavy
+
+- type: loadout
+  id: BrigmedicJumpsuitNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedicNavy
+
+- type: loadout
+  id: BrigmedicJumpskirtNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtBrigmedicNavy
+
+- type: loadout
+  id: SecurityBeretNavy
+  equipment:
+    head: ClothingHeadHatBeretSecurityNavy
+
+- type: loadout
+  id: SecurityHatNavy
+  equipment:
+    head: ClothingHeadHatSecsoftNavy
+
+- type: loadout
+  id: SecurityHatBlack
+  equipment:
+    head: ClothingHeadHatSecsoftBlack
+
+- type: loadout
+  id: SecurityOfficerWintercoatNavy
+  equipment:
+    outerClothing: ClothingOuterWinterSecArmoredNavy
+
+- type: loadout
+  id: WardenCoatNavy
+  equipment:
+    outerClothing: ClothingOuterCoatWardenNavy
+
+- type: loadout
+  id: WardenArmoredWinterCoatNavy
+  equipment:
+    outerClothing: ClothingOuterWinterWardenNavy
+
+- type: loadout
+  id: BrigmedicAMGNavy
+  equipment:
+    outerClothing: ClothingOuterCoatAMGNavy

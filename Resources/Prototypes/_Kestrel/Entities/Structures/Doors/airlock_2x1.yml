@@ -1,0 +1,128 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: two-tile (2x1) glass airlock, using Aurorastation's pre-3/4 double door art.
+# Mapping only: there is no construction recipe, and it cannot be deconstructed into a normal airlock.
+#
+# Rotate it while placing. It sits on the tile you place it on and covers one more tile, which
+# turns with it:
+#   South (unrotated) = placed tile + the tile above     North = placed tile + the tile below
+#   East              = placed tile + the tile to the left  West = placed tile + the tile to the right
+# The extra tile is made airtight by an invisible filler (see KestrelMultiTileAirtightSystem).
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlass2x1
+  name: double glass airlock
+  description: A wide glass airlock, two tiles across. It opens, it closes, and maybe crushes two of you.
+  components:
+  # Airlocks can rotate already; written out so it's clear this door relies on it.
+  - type: Transform
+    anchored: true
+    noRot: false
+  # 96x96 canvas centred on the door's own tile, with four facings. Each facing has the glass on
+  # the tiles the door covers at that rotation. Centred (no sprite offset) so the hover outline,
+  # which is drawn in a box centred on the entity, doesn't cut it off.
+  - type: Sprite
+    sprite: _Kestrel/Structures/Doors/Airlocks/airlock_2x1_glass.rsi
+    # Must be false for four-facing art. With snapCardinals: true the engine picks the right
+    # facing's picture and then draws it a quarter-turn the wrong way (the horizontal East picture
+    # came out vertical). Normal airlocks use true because their art only has one facing.
+    snapCardinals: false
+    # Same layers as the normal airlock, minus the emergency-access light, which this art doesn't have.
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: bolted_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: panel_open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: Interface/Misc/ai_hud.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.HUD"]
+    - state: electrified
+      sprite: Effects/electricity.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.Sparks"]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
+  # Aurora's 1.8 second open/close. The door becomes walkable after openTimeOne (0.6 s) but only
+  # switches to its "open" picture when both times are up (1.8 s), so the animation plays in full.
+  - type: Door
+    openingAnimationTime: 1.8
+    closingAnimationTime: 1.8
+    openTimeOne: 0.6
+    openTimeTwo: 1.2
+    closeTimeOne: 1.2 # stays walkable until the panels are mostly shut
+    closeTimeTwo: 0.6
+  - type: Airlock
+    emergencyAccessLayer: false # no emergency-access light in this art
+    animatePanel: false # the panel has no opening/closing animation in this art
+  # Placed tile + "one tile up" in the door's own frame ("left,bottom,right,top" in tiles from the
+  # placed tile's centre). Rotating the door turns this box with it.
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,1.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - GlassAirlockLayer
+  # Same "one tile up", turned by the door's rotation when the filler is placed.
+  - type: KestrelMultiTileAirtight
+    offset: 0,1
+  # Spray painting would swap in a 1x1 airlock sprite, so it's switched off.
+  - type: Paintable
+    group: null
+  # Mapping only: a graph with no steps, so it can't be built or taken apart.
+  - type: Construction
+    graph: AirlockGlass2x1
+    node: airlock
+  # The normal airlock breaks into its construction "assembly" first; this door has none,
+  # so it just breaks apart.
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 3
+          ShardGlassReinforced:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+# Invisible marker on a door's second tile. It only exists to block air when the door is closed.
+- type: entity
+  id: KestrelAirlockFiller
+  name: airlock filler
+  description: The other half of a double airlock. You shouldn't be able to see this.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    anchored: true
+  - type: KestrelAirtightFiller
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    blockExplosions: false # only blocks explosions while the door is closed, like air

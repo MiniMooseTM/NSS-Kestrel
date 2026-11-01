@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: bolting and unbolting the self-destruct terminal with tools.
+# Both nodes are the same entity; only its anchored state changes.
+#
+#   loose  --wrench (5 s)-->  bolted
+#   bolted --welder (15 s), wrench (5 s), crowbar (5 s)-->  loose
+#          (cut the bolts, work the broken bolts loose, pry the terminal up)
+#
+# Unbolting is blocked while the nuke is armed (KestrelNukeNotArmed).
+# Examining the terminal shows the next tool needed.
+
+- type: constructionGraph
+  id: KestrelSelfDestructTerminal
+  start: loose
+  graph:
+  - node: loose
+    edges:
+    - to: bolted
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Anchoring
+        doAfter: 5
+      completed:
+      - !type:SetAnchor
+        value: true
+
+  - node: bolted
+    edges:
+    - to: loose
+      conditions:
+      - !type:KestrelNukeNotArmed
+      steps:
+      - tool: Welding
+        doAfter: 15
+      - tool: Anchoring
+        doAfter: 5
+      - tool: Prying
+        doAfter: 5
+      completed:
+      - !type:SetAnchor
+        value: false

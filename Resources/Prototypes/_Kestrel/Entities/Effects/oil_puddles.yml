@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: pre-made oil slicks for mapping (hangars, engineering, maintenance, robotics).
+# Same pattern as the upstream PuddleBlood: a normal puddle that starts with some machine oil in it,
+# so it spreads, can be mopped, and leaves oily footprints like any other puddle.
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleMachineOilSmall
+  suffix: Machine oil (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: MachineOil
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleMachineOil
+  suffix: Machine oil (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: MachineOil
+          Quantity: 30

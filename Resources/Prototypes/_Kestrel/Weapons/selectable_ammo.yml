@@ -1,0 +1,38 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: the energy shotgun's three fire modes, copied from Goob's selectableAmmo prototypes
+# (_Goobstation/.../AmmoSelector/ammo_selector_protos.yml) with a colour added to each.
+#
+# When a mode is picked, the ammo selector tells the gun this colour, and the gun's
+# KestrelModeLightVisuals tints its charge lights with it (Aurora-style: red = lethal,
+# light blue = stun). Goob's originals have no colour, so they're left alone and the shotgun
+# points at these instead.
+
+- type: selectableAmmo
+  id: KestrelShotgunLaserSpread
+  desc: Wide laser spread.
+  icon:
+    sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/selectable_ammo.rsi
+    state: heavylaser-wide
+  color: "#FF3030" # lethal
+  protoId: BulletLaserSpread
+  fireCost: 100
+
+- type: selectableAmmo
+  id: KestrelShotgunLaserSpreadNarrow
+  desc: Narrow laser spread.
+  icon:
+    sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/selectable_ammo.rsi
+    state: heavylaser-narrow
+  color: "#FF3030" # lethal
+  protoId: BulletLaserSpreadNarrow
+  fireCost: 100
+
+- type: selectableAmmo
+  id: KestrelShotgunDisablerSpread
+  desc: Disabler bolt spread.
+  icon:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    state: omnilaser
+  color: "#5CC8FF" # stun
+  protoId: BulletDisablerSmgSpread
+  fireCost: 100

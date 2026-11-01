@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "icons/obj/nuke_station.dmi (scuttling device terminal) from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/1e4d8bd6e004e569757bfd4663f2918327ec511a.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "idle"
+    },
+    {
+      "name": "greenlight"
+    },
+    {
+      "name": "urgent",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "exploding",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

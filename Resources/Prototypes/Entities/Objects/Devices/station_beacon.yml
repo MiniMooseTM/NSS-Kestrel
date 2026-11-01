@@ -173,7 +173,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-security
-    color: "#DE3A3A"
+    color: "#345189" # Kestrel: was #DE3A3A
 
 - type: entity
   parent: DefaultStationBeaconSecurity

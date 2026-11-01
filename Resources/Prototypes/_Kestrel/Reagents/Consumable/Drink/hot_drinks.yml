@@ -1,0 +1,73 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: drinks from Aurorastation's Coffee Master that Kestrel didn't have yet.
+# Modelled on Coffee and Tea in Reagents/Consumable/Drink/drinks.yml.
+
+- type: reagent
+  id: Espresso
+  name: reagent-name-espresso
+  parent: BaseDrink
+  desc: reagent-desc-espresso
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: bitter
+  color: "#2b1a0e"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 1 # a small, strong shot: less thirst-quenching than coffee
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 3
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+      - !type:AdjustReagent # twice coffee's caffeine
+        reagent: Caffeine
+        amount: 1
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/coffeeglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: ChaiTea
+  name: reagent-name-chai-tea
+  parent: BaseDrink
+  desc: reagent-desc-chai-tea
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: spicy
+  color: "#b07a4a"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/teaglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: HotCider
+  name: reagent-name-hot-cider
+  parent: BaseDrink
+  desc: reagent-desc-hot-cider
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: apple
+  color: "#c9822b"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2

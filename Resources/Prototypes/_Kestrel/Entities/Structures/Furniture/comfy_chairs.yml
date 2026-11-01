@@ -1,0 +1,58 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: coloured comfy chairs. Mapping only.
+#
+# The upstream comfy chair art (Structures/Furniture/chairs.rsi, state "comfy") is pure greyscale,
+# so it can be tinted with the Sprite "color" field: each pixel's grey is multiplied by the colour.
+# Light greys become the colour, dark outlines and legs stay dark. No new art needed.
+#
+# They inherit everything else from ComfyChair, including its construction graph, so taking one
+# apart gives the normal materials and rebuilding it makes the plain grey chair.
+# To add a colour: copy one block, change the id, name and color.
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairBrown
+  name: brown comfy chair
+  components:
+  - type: Sprite
+    color: "#C08850"
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairRed
+  name: red comfy chair
+  components:
+  - type: Sprite
+    color: "#D85050"
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairBlue
+  name: blue comfy chair
+  components:
+  - type: Sprite
+    color: "#5A80D8"
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairGreen
+  name: green comfy chair
+  components:
+  - type: Sprite
+    color: "#6AA860"
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairBlack
+  name: black comfy chair
+  components:
+  - type: Sprite
+    color: "#606060"
+
+- type: entity
+  parent: ComfyChair
+  id: ComfyChairBeige
+  name: beige comfy chair
+  components:
+  - type: Sprite
+    color: "#FFF0C8"

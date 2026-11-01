@@ -1,0 +1,117 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: jugs for the hot drinks machine. Same pattern as DrinkCoffeeJug / DrinkTeaJug
+# (Entities/Objects/Consumable/Drinks/drinks_bottles_plastic.yml): 300u, labelled, and tagged
+# DrinkBottle (via DrinkBottlePlasticBaseFull) so they fit in drink dispensers.
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkEspressoJug
+  name: espresso jug
+  description: Concentrated wake-up juice.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Espresso
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-espresso
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkChaiTeaJug
+  name: chai tea jug
+  description: Spiced black tea, by the litre.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: ChaiTea
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-chai-tea
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkHotCiderJug
+  name: hot cider jug
+  description: Spiced apple cider. No alcohol, no regrets.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: HotCider
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-hot-cider
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkHotCocoaJug
+  name: hot cocoa jug
+  description: Chocolatey comfort in bulk.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: HotCocoa
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-hot-cocoa
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkMilkJug
+  name: milk jug
+  description: A big jug of milk for the coffee machine.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Milk
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-milk
+
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkSoyMilkJug
+  name: soy milk jug
+  description: A big jug of soy milk for the coffee machine.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: MilkSoy
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-milk-soy
+
+# DrinkWaterJug already exists but is a drinking glass, so it doesn't fit dispensers.
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkWaterPlasticJug
+  name: water jug
+  description: A big plastic jug of water for the coffee machine.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Water
+          Quantity: 300
+  - type: Label
+    currentLabel: reagent-name-water

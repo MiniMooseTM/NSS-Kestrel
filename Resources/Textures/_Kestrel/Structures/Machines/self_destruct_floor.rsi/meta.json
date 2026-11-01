@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "bcircuit and rcircuit states of icons/turf/flooring/circuit.dmi from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/1e4d8bd6e004e569757bfd4663f2918327ec511a, tiled 3x3.",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "safe"
+    },
+    {
+      "name": "on"
+    },
+    {
+      "name": "anim",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    }
+  ]
+}

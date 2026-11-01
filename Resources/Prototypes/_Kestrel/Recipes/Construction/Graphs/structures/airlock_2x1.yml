@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: construction graph for the 2x1 glass airlock.
+# It has a single node and no steps, which makes the door mapping-only:
+# nothing can build it, and tools can't take it apart.
+
+- type: constructionGraph
+  id: AirlockGlass2x1
+  start: airlock
+  graph:
+  - node: airlock

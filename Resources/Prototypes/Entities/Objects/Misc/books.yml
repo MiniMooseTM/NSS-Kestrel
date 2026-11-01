@@ -277,9 +277,9 @@
     layers:
     - state: paper
     - state: cover_base
-      color: "#ab1515"
+      color: "#23365B" # Kestrel: was #ab1515
     - state: decor_wingette
-      color: "#e05334"
+      color: "#345188" # Kestrel: was #e05334
     - state: icon_stunbaton
   - type: MeleeWeapon
     wideAnimationRotation: 180

@@ -331,13 +331,13 @@
   - type: Sprite
     layers:
     - state: icon
-      color: "#8f3132"
+      color: "#172137" # Kestrel: was #8f3132
     - state: accent2-icon
       color: "#2e2e2e"
     - state: accenthighlight-icon
       color: "#313e5a"
     - state: clip-icon
-      color: "#730000"
+      color: "#0F1421" # Kestrel: was #730000
     - state: clip_right-icon
       color: "#313e5a"
     - state: pants-icon
@@ -346,26 +346,26 @@
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#8f3132"
+        color: "#172137" # Kestrel: was #8f3132
       - state: accent2-inhand-left
         color: "#2e2e2e"
       - state: accenthighlight-inhand-left
         color: "#313e5a"
       - state: clip-inhand-left
-        color: "#730000"
+        color: "#0F1421" # Kestrel: was #730000
       - state: clip_right-inhand-left
         color: "#313e5a"
       - state: pants-inhand-left
         color: "#2e2e2e"
       right:
       - state: inhand-right
-        color: "#8f3132"
+        color: "#172137" # Kestrel: was #8f3132
       - state: accent2-inhand-right
         color: "#2e2e2e"
       - state: accenthighlight-inhand-right
         color: "#313e5a"
       - state: clip-inhand-right
-        color: "#730000"
+        color: "#0F1421" # Kestrel: was #730000
       - state: clip_right-inhand-right
         color: "#313e5a"
       - state: pants-inhand-right
@@ -374,19 +374,19 @@
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
-        color: "#8f3132"
+        color: "#172137" # Kestrel: was #8f3132
       - state: accent2-equipped-INNERCLOTHING
         color: "#2e2e2e"
       - state: accenthighlight-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: clip-equipped-INNERCLOTHING
-        color: "#730000"
+        color: "#0F1421" # Kestrel: was #730000
       - state: clip_right-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: pants-equipped-INNERCLOTHING
         color: "#2e2e2e"
       - state: loweraccent-equipped-INNERCLOTHING
-        color: "#732829"
+        color: "#131A2B" # Kestrel: was #732829
       - state: shoesdark-equipped-INNERCLOTHING
         color: "#2e2e2e"
       - state: soles-equipped-INNERCLOTHING
@@ -409,7 +409,7 @@
     - state: accenthighlight-icon
       color: "#313e5a"
     - state: clip-icon
-      color: "#860000"
+      color: "#121928" # Kestrel: was #860000
     - state: clip_right-icon
       color: "#313e5a"
     - state: pants-icon
@@ -426,7 +426,7 @@
       - state: accenthighlight-inhand-left
         color: "#313e5a"
       - state: clip-inhand-left
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-left
         color: "#313e5a"
       - state: pants-inhand-left
@@ -441,7 +441,7 @@
       - state: accenthighlight-inhand-right
         color: "#313e5a"
       - state: clip-inhand-right
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-right
         color: "#313e5a"
       - state: pants-inhand-right
@@ -458,7 +458,7 @@
       - state: accenthighlight-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: clip-equipped-INNERCLOTHING
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: pants-equipped-INNERCLOTHING
@@ -489,9 +489,9 @@
     - state: accenthighlight-icon
       color: "#313e5a"
     - state: tie-icon
-      color: "#a61d1d"
+      color: "#18243D" # Kestrel: was #a61d1d
     - state: clip-icon
-      color: "#860000"
+      color: "#121928" # Kestrel: was #860000
     - state: clip_right-icon
       color: "#313e5a"
     - state: pants-icon
@@ -508,9 +508,9 @@
       - state: accenthighlight-inhand-left
         color: "#313e5a"
       - state: tie-inhand-left
-        color: "#a61d1d"
+        color: "#18243D" # Kestrel: was #a61d1d
       - state: clip-inhand-left
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-left
         color: "#313e5a"
       - state: pants-inhand-left
@@ -525,9 +525,9 @@
       - state: accenthighlight-inhand-right
         color: "#313e5a"
       - state: tie-inhand-right
-        color: "#a61d1d"
+        color: "#18243D" # Kestrel: was #a61d1d
       - state: clip-inhand-right
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-right
         color: "#313e5a"
       - state: pants-inhand-right
@@ -544,19 +544,19 @@
       - state: accenthighlight-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: tie-equipped-INNERCLOTHING
-        color: "#a61d1d"
+        color: "#18243D" # Kestrel: was #a61d1d
       - state: clip-equipped-INNERCLOTHING
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: cuffs-equipped-INNERCLOTHING
-        color: "#a11a1a"
+        color: "#17223A" # Kestrel: was #a11a1a
       - state: cuffs_upper-equipped-INNERCLOTHING
-        color: "#c92323"
+        color: "#1E2E4F" # Kestrel: was #c92323
       - state: pants-equipped-INNERCLOTHING
         color: "#333333"
       - state: loweraccent-equipped-INNERCLOTHING
-        color: "#a61d1d"
+        color: "#18243D" # Kestrel: was #a61d1d
       - state: shoesdark-equipped-INNERCLOTHING
         color: "#333333"
       - state: soles-equipped-INNERCLOTHING
@@ -1443,7 +1443,7 @@
     - state: accenthighlight-icon
       color: "#313e5a"
     - state: clip-icon
-      color: "#860000"
+      color: "#121928" # Kestrel: was #860000
     - state: clip_right-icon
       color: "#313e5a"
     - state: pants-icon
@@ -1458,7 +1458,7 @@
       - state: accenthighlight-inhand-left
         color: "#313e5a"
       - state: clip-inhand-left
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-left
         color: "#313e5a"
       - state: pants-inhand-left
@@ -1471,7 +1471,7 @@
       - state: accenthighlight-inhand-right
         color: "#313e5a"
       - state: clip-inhand-right
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-right
         color: "#313e5a"
       - state: pants-inhand-right
@@ -1486,7 +1486,7 @@
       - state: accenthighlight-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: clip-equipped-INNERCLOTHING
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: pants-equipped-INNERCLOTHING
@@ -1517,7 +1517,7 @@
     - state: buttons-icon
       color: "#b0bdca"
     - state: clip-icon
-      color: "#860000"
+      color: "#121928" # Kestrel: was #860000
     - state: clip_right-icon
       color: "#313e5a"
     - state: pants-icon
@@ -1536,7 +1536,7 @@
       - state: buttons-inhand-left
         color: "#b0bdca"
       - state: clip-inhand-left
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-left
         color: "#313e5a"
       - state: pants-inhand-left
@@ -1553,7 +1553,7 @@
       - state: buttons-inhand-right
         color: "#b0bdca"
       - state: clip-inhand-right
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-inhand-right
         color: "#313e5a"
       - state: pants-inhand-right
@@ -1572,7 +1572,7 @@
       - state: buttons-equipped-INNERCLOTHING
         color: "#b0bdca"
       - state: clip-equipped-INNERCLOTHING
-        color: "#860000"
+        color: "#121928" # Kestrel: was #860000
       - state: clip_right-equipped-INNERCLOTHING
         color: "#313e5a"
       - state: cuffs-equipped-INNERCLOTHING

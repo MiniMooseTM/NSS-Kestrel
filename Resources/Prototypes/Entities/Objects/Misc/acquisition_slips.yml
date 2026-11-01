@@ -76,7 +76,7 @@
       map: ["enum.PaperVisualLayers.Writing"]
       visible: false
     - state: acquisition_form_header
-      color: "#ff4242"
+      color: "#4467A6" # Kestrel: was #ff4242
     - state: paper_stamp-generic
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false

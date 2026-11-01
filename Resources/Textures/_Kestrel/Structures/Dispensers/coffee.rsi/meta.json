@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/0af897637c7f (icons/obj/chemical.dmi: coffee_machine, coffee_master).",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "coffee_machine"
+    },
+    {
+      "name": "hot_drinks"
+    }
+  ]
+}

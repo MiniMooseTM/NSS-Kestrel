@@ -1,0 +1,78 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: coffee machines, ported from Aurorastation's coffee dispensers.
+# They are ordinary drink dispensers (like the soda dispenser in Structures/Dispensers/soda.yml):
+# they pour from the jugs stored inside, and accept any jug tagged DrinkBottle.
+
+# Coffee machine: coffee only.
+- type: entity
+  parent: ReagentDispenserBase
+  id: KestrelCoffeeMachineEmpty
+  name: coffee machine
+  description: The station's most valuable piece of equipment. Pours coffee from the jug inside.
+  suffix: Empty
+  components:
+  - type: Rotatable
+  - type: Sprite
+    sprite: _Kestrel/Structures/Dispensers/coffee.rsi
+    drawdepth: SmallObjects
+    state: coffee_machine
+  - type: Storage
+    openOnActivate: false
+    whitelist:
+      tags:
+      - DrinkBottle
+  - type: Transform
+    noRot: false
+  - type: Machine
+    board: KestrelCoffeeMachineCircuitboard
+  - type: GuideHelp
+    guides:
+    - Drinks
+
+- type: entity
+  parent: KestrelCoffeeMachineEmpty
+  id: KestrelCoffeeMachine
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkCoffeeJug
+
+# Hot drinks machine: Aurora's "Coffee Master" selection.
+- type: entity
+  parent: KestrelCoffeeMachineEmpty
+  id: KestrelHotDrinksMachineEmpty
+  name: hot drinks machine
+  description: A coffee machine on steroids. Coffee, espresso, teas, cocoa, cider and everything to go in them.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Dispensers/coffee.rsi
+    drawdepth: SmallObjects
+    state: hot_drinks
+  - type: Machine
+    board: KestrelHotDrinksMachineCircuitboard
+
+- type: entity
+  parent: KestrelHotDrinksMachineEmpty
+  id: KestrelHotDrinksMachine
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkCoffeeJug
+        - id: DrinkEspressoJug
+        - id: DrinkTeaJug
+        - id: DrinkGreenTeaJug
+        - id: DrinkChaiTeaJug
+        - id: DrinkHotCiderJug
+        - id: DrinkHotCocoaJug
+        - id: DrinkCreamCartonXL
+        - id: DrinkSugarJug
+        - id: DrinkMilkJug
+        - id: DrinkSoyMilkJug
+        - id: DrinkWaterPlasticJug

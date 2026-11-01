@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Spline decals taken from Aurorastation/Aurora.3 (icons/turf/decals/decals.dmi) at commit https://github.com/Aurorastation/Aurora.3/commit/0af8976; split into single-direction states and given a wood-tinted set for NSS-Kestrel.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "fancy_line_s"
+    },
+    {
+      "name": "wood_fancy_line_s"
+    },
+    {
+      "name": "fancy_line_n"
+    },
+    {
+      "name": "wood_fancy_line_n"
+    },
+    {
+      "name": "fancy_line_e"
+    },
+    {
+      "name": "wood_fancy_line_e"
+    },
+    {
+      "name": "fancy_line_w"
+    },
+    {
+      "name": "wood_fancy_line_w"
+    },
+    {
+      "name": "fancy_line_se"
+    },
+    {
+      "name": "wood_fancy_line_se"
+    },
+    {
+      "name": "fancy_line_sw"
+    },
+    {
+      "name": "wood_fancy_line_sw"
+    },
+    {
+      "name": "fancy_line_ne"
+    },
+    {
+      "name": "wood_fancy_line_ne"
+    },
+    {
+      "name": "fancy_line_nw"
+    },
+    {
+      "name": "wood_fancy_line_nw"
+    },
+    {
+      "name": "fancy_corner_se"
+    },
+    {
+      "name": "wood_fancy_corner_se"
+    },
+    {
+      "name": "fancy_corner_ne"
+    },
+    {
+      "name": "wood_fancy_corner_ne"
+    },
+    {
+      "name": "fancy_corner_nw"
+    },
+    {
+      "name": "wood_fancy_corner_nw"
+    },
+    {
+      "name": "fancy_corner_sw"
+    },
+    {
+      "name": "wood_fancy_corner_sw"
+    },
+    {
+      "name": "fancy_cee_open_n"
+    },
+    {
+      "name": "wood_fancy_cee_open_n"
+    },
+    {
+      "name": "fancy_cee_open_s"
+    },
+    {
+      "name": "wood_fancy_cee_open_s"
+    },
+    {
+      "name": "fancy_cee_open_w"
+    },
+    {
+      "name": "wood_fancy_cee_open_w"
+    },
+    {
+      "name": "fancy_cee_open_e"
+    },
+    {
+      "name": "wood_fancy_cee_open_e"
+    },
+    {
+      "name": "fancy_full"
+    },
+    {
+      "name": "wood_fancy_full"
+    },
+    {
+      "name": "plain_line_s"
+    },
+    {
+      "name": "wood_plain_line_s"
+    },
+    {
+      "name": "plain_line_n"
+    },
+    {
+      "name": "wood_plain_line_n"
+    },
+    {
+      "name": "plain_line_e"
+    },
+    {
+      "name": "wood_plain_line_e"
+    },
+    {
+      "name": "plain_line_w"
+    },
+    {
+      "name": "wood_plain_line_w"
+    },
+    {
+      "name": "plain_line_se"
+    },
+    {
+      "name": "wood_plain_line_se"
+    },
+    {
+      "name": "plain_line_sw"
+    },
+    {
+      "name": "wood_plain_line_sw"
+    },
+    {
+      "name": "plain_line_ne"
+    },
+    {
+      "name": "wood_plain_line_ne"
+    },
+    {
+      "name": "plain_line_nw"
+    },
+    {
+      "name": "wood_plain_line_nw"
+    },
+    {
+      "name": "plain_corner_se"
+    },
+    {
+      "name": "wood_plain_corner_se"
+    },
+    {
+      "name": "plain_corner_ne"
+    },
+    {
+      "name": "wood_plain_corner_ne"
+    },
+    {
+      "name": "plain_corner_nw"
+    },
+    {
+      "name": "wood_plain_corner_nw"
+    },
+    {
+      "name": "plain_corner_sw"
+    },
+    {
+      "name": "wood_plain_corner_sw"
+    },
+    {
+      "name": "plain_cee_open_n"
+    },
+    {
+      "name": "wood_plain_cee_open_n"
+    },
+    {
+      "name": "plain_cee_open_s"
+    },
+    {
+      "name": "wood_plain_cee_open_s"
+    },
+    {
+      "name": "plain_cee_open_w"
+    },
+    {
+      "name": "wood_plain_cee_open_w"
+    },
+    {
+      "name": "plain_cee_open_e"
+    },
+    {
+      "name": "wood_plain_cee_open_e"
+    },
+    {
+      "name": "plain_full"
+    },
+    {
+      "name": "wood_plain_full"
+    }
+  ]
+}

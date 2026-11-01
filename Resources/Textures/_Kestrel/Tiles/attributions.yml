@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- files: [ "aurora_circuit_blue.png", "aurora_circuit_green.png", "aurora_circuit_red.png", "aurora_circuit_red_off.png" ]
+  license: "CC-BY-SA-3.0"
+  copyright: "bcircuit, gcircuit, rcircuit and rcircuit_off from icons/turf/flooring/circuit.dmi, Aurorastation/Aurora.3 at commit 1e4d8bd6e004e569757bfd4663f2918327ec511a (before the 3/4 perspective update)."
+  source: "https://github.com/Aurorastation/Aurora.3/"
+
+- files: [ "aurora_reinforced_large.png", "aurora_dark_tiled.png", "aurora_tiled.png" ]
+  license: "CC-BY-SA-3.0"
+  copyright: "reinforced_large, dark_preview and tiled_preview from icons/turf/flooring/tiles.dmi, Aurorastation/Aurora.3 at commit 0af897637c7f."
+  source: "https://github.com/Aurorastation/Aurora.3/"

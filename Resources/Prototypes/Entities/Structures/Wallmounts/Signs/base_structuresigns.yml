@@ -7,7 +7,8 @@
   abstract: true
   components:
   - type: WallMount
-    arc: 360
+    arc: 180 # Kestrel: was 360. One-sided, like APCs: only visible from the side it faces.
+  - type: KestrelWallMountAutoFace # Kestrel: turns signs that face into a wall toward open floor
   - type: Rotatable
   - type: Destructible
     thresholds:

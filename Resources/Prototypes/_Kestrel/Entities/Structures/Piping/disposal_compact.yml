@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: compact disposal unit, using Aurorastation's pre-3/4 "disposal_small" art.
+# Mapping only (no construction recipe of its own).
+#
+# It's a normal disposal unit in every way (throwing things in, flushing, pipes, pressure, the UI);
+# only the picture and the collision box change. It sits against the wall behind it, not in the
+# middle of the tile. Rotate it while placing to choose which way the chute faces:
+#   unrotated = faces south, so it goes on a floor tile with a wall to its NORTH
+#   East = wall to its west, North = wall to its south, West = wall to its east
+
+- type: entity
+  parent: DisposalUnit
+  id: KestrelDisposalUnitCompact
+  name: compact disposal unit
+  description: A small pneumatic waste disposal chute.
+  components:
+  # Every machine inherits "noRot: true" from BaseMachine, which locks rotation at 0: the placement
+  # preview turns, but the placed unit is always unrotated (south). This one needs to face any way.
+  - type: Transform
+    anchored: true
+    noRot: false
+  # Same layer names and states as the normal unit (see DisposalUnitBase), so the disposal
+  # code drives the lights and the flush animation without changes.
+  - type: Sprite
+    sprite: _Kestrel/Structures/Piping/disposal_compact.rsi
+    # The normal unit uses snapCardinals: true because its art has one direction. This art has
+    # four, and snapCardinals would turn each facing's picture a quarter-turn the wrong way.
+    snapCardinals: false
+  # Covers the back half of the tile, where the art is ("left,bottom,right,top" in tiles from the
+  # tile centre, unrotated). The box turns with the unit, so it always hugs the wall behind it.
+  #
+  # People walk straight through it. Two things decide whether entities bump into each other:
+  # my "layer" against their "mask", and their layer against my mask. The normal unit uses
+  # MachineLayer, which includes the bits a person's MobMask checks for, so people bump into it.
+  # TabletopMachineLayer (what microwaves and fax machines use) is only Opaque + BulletImpassable,
+  # which people's masks ignore, so they pass through.
+  # Thrown items still hit it, because a thrown item's mask (ThrownItem) checks for
+  # BulletImpassable. That's what keeps "throw it in the bin" working. It stays "hard" because
+  # thrown items ignore non-hard fixtures. Side effect: stray bullets and lasers can hit it, like
+  # any other machine.
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,0.0,0.25,0.49"
+        density: 55
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer

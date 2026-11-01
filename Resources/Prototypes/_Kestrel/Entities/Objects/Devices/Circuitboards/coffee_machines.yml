@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: machine boards for the coffee machines, copied from SodaDispenserMachineCircuitboard
+# (Entities/Objects/Devices/Circuitboards/Machine/production.yml). Deconstructing a coffee machine
+# gives back its own board, so it rebuilds as a coffee machine instead of a soda dispenser.
+# There is no lathe recipe yet, so boards only come from deconstructing an existing machine.
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: KestrelCoffeeMachineCircuitboard
+  name: coffee machine board
+  description: A machine printed circuit board for a coffee machine.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: KestrelCoffeeMachineEmpty
+    stackRequirements:
+      Steel: 5
+    tagRequirements:
+      GlassBeaker:
+        amount: 1
+        defaultPrototype: Beaker
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: KestrelHotDrinksMachineCircuitboard
+  name: hot drinks machine board
+  description: A machine printed circuit board for a hot drinks machine.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: KestrelHotDrinksMachineEmpty
+    stackRequirements:
+      Steel: 5
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker

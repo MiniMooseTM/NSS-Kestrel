@@ -1,0 +1,86 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: status display console. Command staff use it to set what every status display on the
+# station shows: the alert level, a line of text, or an icon. (Announcements and the EBS come later.)
+# Code: KestrelStatusDisplaySystem (server), KestrelStatusDisplayConsoleWindow (client).
+
+- type: entity
+  parent: BaseComputerAiAccess
+  id: KestrelComputerStatusDisplay
+  name: status display console
+  description: Controls the facility's status displays. Command access required.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_monitor
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  # Only Command can open the menu.
+  - type: AccessReader
+    access: [[ "Command" ]]
+  - type: ActivatableUIRequiresAccess
+  - type: ActivatableUI
+    key: enum.KestrelStatusDisplayConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.KestrelStatusDisplayConsoleUiKey.Key:
+        type: KestrelStatusDisplayConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  # Icons offered in the menu: states of the status display's sprite (status_display.rsi).
+  - type: KestrelStatusDisplayConsole
+    icons:
+    - default
+    - blank
+    - biohazard
+    - lockdown
+    - radiation
+    - ai_happy
+    - ai_veryhappy
+    - ai_neutral
+    - ai_unsure
+    - ai_confused
+    - ai_surprised
+    - ai_sad
+    - ai_upset
+    - ai_angry
+    - ai_facepalm
+    - ai_awesome
+    - ai_trollface
+    - ai_friend
+    - ai_urist
+    - ai_dwarf
+    - ai_beer
+    - ai_plump
+    - ai_fishtank
+    - ai_tribunal
+    - ai_tribunal_malf
+    - ai_diagnostics
+    - ai_bsod
+    - ai_off
+  - type: Computer
+    board: KestrelStatusDisplayComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 4.0
+    color: "#3c5eb5"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: KestrelStatusDisplayComputerCircuitboard
+  name: status display console board
+  description: A computer printed circuit board for a status display console.
+  components:
+  - type: Sprite
+    state: cpu_command
+  - type: ComputerBoard
+    prototype: KestrelComputerStatusDisplay

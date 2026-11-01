@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- files: ["shower_start.ogg", "shower_mid1.ogg", "shower_end.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/0af897637c7f (sound/machines/shower). Converted to mono for NSS-Kestrel."
+  source: "https://github.com/Aurorastation/Aurora.3/tree/master/sound/machines/shower"

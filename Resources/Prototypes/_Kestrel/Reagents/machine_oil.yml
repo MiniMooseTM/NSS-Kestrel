@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: machine oil. The dark lubricant that leaks out of machines and synthetics.
+# (The upstream "Oil" reagent is orange cooking oil, so this is separate.)
+#
+# Not slippery (no slipData) and not flammable (no FlammableTileReaction), by design.
+# Footprints: Goob's FootprintSystem picks up any reagent with sticksToSkin: true (the default)
+# from a puddle and leaves prints in the reagent's colour, so oil footprints need no extra code.
+
+- type: reagent
+  id: MachineOil
+  name: reagent-name-machine-oil
+  desc: reagent-desc-machine-oil
+  physicalDesc: reagent-physical-desc-oily
+  group: Toxins
+  flavor: oily
+  flavorMinimum: 0.05
+  color: "#1c1a17" # near-black with a little brown
+  recognizable: true
+  boilingPoint: 350.0
+  meltingPoint: -40.0
+  # Drinking it is a bad idea, but not a deadly one.
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.5

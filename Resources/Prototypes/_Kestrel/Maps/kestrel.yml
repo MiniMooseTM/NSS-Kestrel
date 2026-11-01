@@ -1,0 +1,42 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: the map prototype for NSS Kestrel.
+#
+# A map file (Resources/Maps/...) is just the saved grid. The game only treats it as a playable
+# station once a "gameMap" prototype like this one points at it. This prototype makes the map show
+# up in the admin map picker / "forcemap", and adding its id to a map pool (Maps/Pools/default.yml)
+# puts it in the lobby map vote and rotation.
+#
+# Workflow: the mapper saves to the user data folder (D:\SS14\KestrelData\Maps\_Kestrel\), which the
+# server doesn't load maps from. After saving, copy kestrel_wip.yml into Resources/Maps/_Kestrel/
+# (replace the old copy) and rebuild.
+
+- type: gameMap
+  id: Kestrel
+  mapName: 'NSS Kestrel'
+  mapPath: /Maps/_Kestrel/kestrel_wip.yml
+  minPlayers: 0
+  maxPlayers: 80
+  stations:
+    # This key must match the "BecomesStation" id on the station grid in the map file. The map
+    # was started from a blank template whose id is "Empty". Players never see this key; the
+    # station's name comes from StationNameSetup below.
+    Empty:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NSS Kestrel' # no name generator, so the name is used exactly as written
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_cluster.yml # placeholder until Kestrel has its own
+        - type: StationJobs
+          # Only the jobs the map has spawn points for so far. Add a job here when you map its spawn
+          # point. [ round start slots, max slots ]; -1 means unlimited.
+          availableJobs:
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            Lawyer: [ 1, 1 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            ServiceWorker: [ 1, 2 ]
+            Passenger: [ -1, -1 ]

@@ -1,0 +1,237 @@
+# Kestrel: alternate-color loadout variants of security clothing (navy for all core items, plus a black security cap).
+# Security's default color is midnight blue; each variant inherits everything from the normal item
+# and only swaps the sprite (and the in-hand tint).
+
+- type: entity
+  parent: ClothingUniformJumpsuitSec
+  id: ClothingUniformJumpsuitSecNavy
+  name: navy security jumpsuit
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtSec
+  id: ClothingUniformJumpskirtSecNavy
+  name: navy security jumpskirt
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/security.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/security.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/security.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitWarden
+  id: ClothingUniformJumpsuitWardenNavy
+  name: navy warden's uniform
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtWarden
+  id: ClothingUniformJumpskirtWardenNavy
+  name: navy warden's uniform
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/warden.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/warden.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/warden.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitHoS
+  id: ClothingUniformJumpsuitHoSNavy
+  name: navy head of security's jumpsuit
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtHoS
+  id: ClothingUniformJumpskirtHoSNavy
+  name: navy head of security's jumpskirt
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/hos.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/Security/hos.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-left
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+      right:
+      - state: inhand-right
+        sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+        color: "#2A4170"
+      - state: overlay-inhand-right
+        sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/Security/hos.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitBrigmedic
+  id: ClothingUniformJumpsuitBrigmedicNavy
+  name: navy brigmedic jumpsuit
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/brigmedic.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpsuit/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtBrigmedic
+  id: ClothingUniformJumpskirtBrigmedicNavy
+  name: navy brigmedic jumpskirt
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/brigmedic.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Uniforms/Jumpskirt/brigmedic.rsi
+
+- type: entity
+  parent: ClothingHeadHatBeretSecurity
+  id: ClothingHeadHatBeretSecurityNavy
+  name: navy security beret
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Head/Hats/beret_security.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Head/Hats/beret_security.rsi
+
+- type: entity
+  parent: ClothingHeadHatSecsoft
+  id: ClothingHeadHatSecsoftNavy
+  name: navy security cap
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/Head/Soft/secsoft.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/Head/Soft/secsoft.rsi
+
+- type: entity
+  parent: ClothingHeadHatSecsoft
+  id: ClothingHeadHatSecsoftBlack
+  name: black security cap
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityBlack/Head/Soft/secsoft.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityBlack/Head/Soft/secsoft.rsi
+
+- type: entity
+  parent: ClothingOuterWinterSecArmored
+  id: ClothingOuterWinterSecArmoredNavy
+  name: navy security armored winter coat
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Wintercoats/secvestcoat.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Wintercoats/secvestcoat.rsi
+
+- type: entity
+  parent: ClothingOuterCoatWarden
+  id: ClothingOuterCoatWardenNavy
+  name: navy warden's armored jacket
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Coats/warden.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Coats/warden.rsi
+
+- type: entity
+  parent: ClothingOuterWinterWarden
+  id: ClothingOuterWinterWardenNavy
+  name: navy warden's armored winter coat
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/WinterCoats/coatwardenarmored.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/WinterCoats/coatwardenarmored.rsi
+
+- type: entity
+  parent: ClothingOuterCoatAMG
+  id: ClothingOuterCoatAMGNavy
+  name: navy armored medical gown
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Coats/brigmedic.rsi
+  - type: Clothing
+    sprite: _Kestrel/Clothing/SecurityNavy/OuterClothing/Coats/brigmedic.rsi

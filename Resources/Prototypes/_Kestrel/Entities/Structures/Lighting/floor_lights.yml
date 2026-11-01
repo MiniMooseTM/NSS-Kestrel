@@ -1,0 +1,319 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: in-floor light fixtures, using Aurorastation's pre-3/4 floor tube and floor bulb art.
+# Mapping only (no construction recipe).
+#
+# They're real SS14 powered lights (same PoweredLight code as wall lights): they need APC power,
+# take a tube or bulb, can burn out or break, and work with light switches and the light replacer.
+# They sit flush in the floor: nothing collides with them, and they draw under items and people.
+#
+# The colour, brightness and reach come from the tube/bulb (see Objects/Power/coloured_lights.yml):
+# each variant starts with a dim "floor" tube or bulb in its colour. The "alert" variants change colour with the
+# station alert level (KestrelAlertLightSystem).
+#
+# Floor tubes have four facings; rotate them while placing. Unrotated sits at the south edge of the tile.
+
+- type: entity
+  abstract: true
+  id: KestrelFloorLightBase
+  description: A light fixture set into the floor.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: FloorObjects # flush with the floor: under items and people
+    layers:
+    - map: ["enum.PoweredLightLayers.Base"]
+      state: base
+    # The lit tube/bulb. White art, tinted to the light's colour by PoweredLightVisualizerSystem.
+    - map: ["enum.PoweredLightLayers.Glow"]
+      state: glow
+      shader: unshaded
+      visible: false
+  - type: PointLight
+    enabled: false
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+  - type: ContainerContainer
+    containers:
+      light_bulb: !type:ContainerSlot
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  # Same as wall lights, so light switches and signal links work.
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: SmartLight
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+  - type: Appearance
+  - type: PoweredLightVisuals
+    blinkingSound:
+      path: "/Audio/Machines/light_tube_on.ogg"
+    spriteStateMap:
+      empty: empty
+      off: base
+      on: base
+      broken: broken
+      burned: burned
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+  - type: PlacementReplacement
+    key: floorlights # its own key, so it doesn't replace a wall light on the same tile
+
+# Floor tube
+
+# The suffix (the [Empty] tag in the spawn menu) is inherited by child entities, so the coloured
+# variants use this abstract base instead of the Empty one. Otherwise they'd all say [Empty].
+- type: entity
+  abstract: true
+  parent: KestrelFloorLightBase
+  id: KestrelFloorTubeBase
+  name: floor light panel
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Lighting/floor_tube.rsi
+    snapCardinals: false # four-facing art
+  - type: PoweredLight
+    bulb: Tube
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeEmpty
+  suffix: Empty
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeWhite
+  name: floor light panel white
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeWhite
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeBlue
+  name: floor light panel blue
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeBlue
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeRed
+  name: floor light panel red
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeRed
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeGreen
+  name: floor light panel green
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeGreen
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeYellow
+  name: floor light panel yellow
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeYellow
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubePurple
+  name: floor light panel purple
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubePurple
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeOrange
+  name: floor light panel orange
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeOrange
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeCyan
+  name: floor light panel cyan
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeCyan
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubePink
+  name: floor light panel pink
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubePink
+
+- type: entity
+  parent: KestrelFloorTubeBase
+  id: KestrelFloorTubeAlert
+  name: floor light panel alert
+  components:
+  - type: PoweredLight
+    bulb: Tube
+    hasLampOnSpawn: KestrelFloorLightTubeWhite
+  # Changes colour with the station alert level (white on green alert).
+  - type: KestrelAlertLight
+
+# Floor bulb
+
+- type: entity
+  abstract: true
+  parent: KestrelFloorLightBase
+  id: KestrelFloorBulbBase
+  name: floor light bulb
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Lighting/floor_bulb.rsi
+    noRot: true # one-facing art; stays upright
+  - type: PoweredLight
+    bulb: Bulb
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbEmpty
+  suffix: Empty
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbWhite
+  name: floor light bulb white
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbWhite
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbBlue
+  name: floor light bulb blue
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbBlue
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbRed
+  name: floor light bulb red
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbRed
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbGreen
+  name: floor light bulb green
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbGreen
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbYellow
+  name: floor light bulb yellow
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbYellow
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbPurple
+  name: floor light bulb purple
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbPurple
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbOrange
+  name: floor light bulb orange
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbOrange
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbCyan
+  name: floor light bulb cyan
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbCyan
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbPink
+  name: floor light bulb pink
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbPink
+
+- type: entity
+  parent: KestrelFloorBulbBase
+  id: KestrelFloorBulbAlert
+  name: floor light bulb alert
+  components:
+  - type: PoweredLight
+    bulb: Bulb
+    hasLampOnSpawn: KestrelFloorLightBulbWhite
+  # Changes colour with the station alert level (white on green alert).
+  - type: KestrelAlertLight
+    normalColor: "#FFD1A3" # warm white, like normal bulbs

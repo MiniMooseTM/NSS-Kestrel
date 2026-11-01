@@ -1,0 +1,49 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: Aurorastation's circuit floors (icons/turf/flooring/circuit.dmi, pre-3/4), for the AI
+# core and other high-tech rooms. Found in the mapping tile menu under these names.
+#
+# Same settings as the upstream circuit floors in Tiles/floors.yml. Prying one up drops the
+# matching upstream circuit tile item (there's no Aurora tile item), so a pried-up tile goes back
+# down as the upstream design. Tiles can't give off light in SS14; if you want the AI core to glow,
+# add lights or light-emitting decals as usual.
+
+- type: tile
+  id: FloorKestrelCircuitBlue
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-circuit-blue
+  sprite: /Textures/_Kestrel/Tiles/aurora_circuit_blue.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemBCircuit
+  tileRipResistance: 225 # same as the upstream circuit floors
+
+- type: tile
+  id: FloorKestrelCircuitGreen
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-circuit-green
+  sprite: /Textures/_Kestrel/Tiles/aurora_circuit_green.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemGCircuit
+  tileRipResistance: 225
+
+- type: tile
+  id: FloorKestrelCircuitRed
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-circuit-red
+  sprite: /Textures/_Kestrel/Tiles/aurora_circuit_red.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemRCircuit
+  tileRipResistance: 225
+
+# Red circuit with its lights off: the dark version the self-destruct floor shows while safe.
+- type: tile
+  id: FloorKestrelCircuitRedOff
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-circuit-red-off
+  sprite: /Textures/_Kestrel/Tiles/aurora_circuit_red_off.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemRCircuit
+  tileRipResistance: 225

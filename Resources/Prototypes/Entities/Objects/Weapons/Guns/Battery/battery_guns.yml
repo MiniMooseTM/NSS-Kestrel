@@ -1054,6 +1054,7 @@
       - state: mag-unshaded-4
         map: ["enum.GunVisualLayers.MagUnshaded"]
         shader: unshaded
+        color: "#FF3030" # Kestrel: the light art is now white and tinted by mode; starts lethal (red)
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -1078,9 +1079,12 @@
   #      pacifismAllowedMode: true
   - type: AmmoSelector
     prototypes:
-      - BulletLaserSpread
-      - BulletLaserSpreadNarrow
-      - BulletDisablerSmgSpread
+      # Kestrel: same three modes, but Kestrel copies that carry a light colour (red lethal, light blue stun)
+      - KestrelShotgunLaserSpread # Kestrel: was BulletLaserSpread
+      - KestrelShotgunLaserSpreadNarrow # Kestrel: was BulletLaserSpreadNarrow
+      - KestrelShotgunDisablerSpread # Kestrel: was BulletDisablerSmgSpread
+  - type: KestrelModeLightVisuals # Kestrel: tints the charge lights with the selected mode's colour
+    layer: enum.GunVisualLayers.MagUnshaded
   - type: UserInterface
     interfaces:
       enum.AmmoSelectorUiKey.Key:
@@ -1119,10 +1123,17 @@
       visible: false
       map: [ "enum.GunVisualLayers.MagUnshaded" ]
       shader: unshaded
+      color: "#FF3030" # Kestrel: the light art is now white and tinted by mode; starts lethal (red)
   - type: MagazineVisuals
     magState: mag
     steps: 4
     zeroVisible: true
+  - type: KestrelModeLightVisuals # Kestrel: light colour follows the fire mode (red lethal, light blue stun)
+    layer: enum.GunVisualLayers.MagUnshaded
+    fireModeColors:
+      BulletLaserMagnum: "#FF3030"
+      BulletLaserWindowPiercingMagnum: "#FF3030"
+      BulletDisabler: "#5CC8FF"
   - type: Appearance
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/energy_magnum.rsi

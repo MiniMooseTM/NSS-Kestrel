@@ -1095,7 +1095,7 @@
   - type: Computer
     board: CargoRequestSecurityComputerCircuitboard
   - type: PointLight
-    color: "#d11d00"
+    color: "#2A416F" # Kestrel: was #d11d00
   - type: AccessReader
     access: [["Security"]]
 

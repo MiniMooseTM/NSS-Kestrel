@@ -1,0 +1,71 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: showers, ported from Aurorastation. Behaviour lives in KestrelShowerSystem (Content.Server/_Kestrel/Shower).
+# Mapping only for now: there is no construction recipe.
+
+- type: entity
+  parent: BaseStructure
+  id: KestrelShower
+  name: shower
+  description: A wall-mounted shower with a temperature valve. A wrench will turn the valve.
+  components:
+  # Walk-through: people stand under it, so it doesn't block movement.
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Rotatable # rotate it to face into the stall; the art has all four facings
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Kestrel/Structures/Furniture/shower.rsi
+    drawdepth: OverMobs # the shower head and spray draw over whoever's standing under it
+    layers:
+    - state: shower
+    - state: water
+      map: ["enum.KestrelShowerVisualLayers.Water"]
+      visible: false
+  # Shows the water layer while the shower is on (the server sets KestrelShowerVisuals.On).
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.KestrelShowerVisuals.On:
+        enum.KestrelShowerVisualLayers.Water:
+          True: { visible: true }
+          False: { visible: false }
+  # Running-water loop, switched on and off by the shower system.
+  - type: AmbientSound
+    enabled: false
+    volume: -3
+    range: 5
+    sound:
+      path: /Audio/_Kestrel/Machines/Shower/shower_mid1.ogg
+  - type: KestrelShower
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+# Steam that builds up over a hot shower. Spawned and removed by KestrelShowerSystem.
+- type: entity
+  id: KestrelShowerSteam
+  name: steam
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Structures/Furniture/shower.rsi
+    state: mist
+    drawdepth: Effects
+    noRot: true

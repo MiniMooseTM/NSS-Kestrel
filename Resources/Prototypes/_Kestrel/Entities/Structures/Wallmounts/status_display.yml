@@ -1,0 +1,90 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: status display, using Aurorastation's status display art. Mapping only.
+#
+# Shows the station's alert level, or whatever command staff set from a status display console:
+# a line of text (ticking across like an LED sign) or an icon. An alert level change switches it
+# back to the alert picture.
+#
+# Alert picture: the upstream AlertLevelDisplay component, same as fire alarms. The server tells every
+# AlertLevelDisplay the current level; the client puts the matching picture from "alertVisuals" on the
+# AlertLevelDisplay layer. With no power, that layer is hidden and the screen goes dark.
+# Text and icons: KestrelStatusDisplay (server) and KestrelStatusDisplayVisuals (client), using the
+# "kestrelIcon" and "kestrelChar0-3" layers below.
+#
+# Green, blue, red and delta use Aurora's own pictures. Levels Aurora has none for show "ALERT"
+# in that level's colour (alert_* states, made by status_display_to_rsi.py).
+
+- type: entity
+  parent: BaseWallmountMachine
+  id: KestrelStatusDisplay
+  name: status display
+  description: Shows the facility's current alert level.
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Kestrel/Structures/Wallmounts/status_display.rsi
+    noRot: true
+    layers:
+    - state: frame
+    - state: greenalert
+      map: [ "enum.AlertLevelDisplay.Layer" ]
+      shader: unshaded # the screen glows in the dark
+    # Icon set from the console.
+    - state: default
+      map: [ "kestrelIcon" ]
+      shader: unshaded
+      visible: false
+    # Four character slots for text, 6 pixels apart (6/32 = 0.1875 tiles). The font images already
+    # place each letter at slot 0, so each slot only shifts it right.
+    - sprite: _Kestrel/Structures/Wallmounts/status_display_font.rsi
+      state: char_space
+      map: [ "kestrelChar0" ]
+      shader: unshaded
+      visible: false
+    - sprite: _Kestrel/Structures/Wallmounts/status_display_font.rsi
+      state: char_space
+      map: [ "kestrelChar1" ]
+      shader: unshaded
+      visible: false
+      offset: 0.1875, 0
+    - sprite: _Kestrel/Structures/Wallmounts/status_display_font.rsi
+      state: char_space
+      map: [ "kestrelChar2" ]
+      shader: unshaded
+      visible: false
+      offset: 0.375, 0
+    - sprite: _Kestrel/Structures/Wallmounts/status_display_font.rsi
+      state: char_space
+      map: [ "kestrelChar3" ]
+      shader: unshaded
+      visible: false
+      offset: 0.5625, 0
+  - type: KestrelStatusDisplay
+  - type: KestrelStatusDisplayVisuals
+    characterSlots: 4
+  - type: Appearance
+  - type: AlertLevelDisplay
+    alertVisuals:
+      green: greenalert
+      blue: bluealert
+      red: redalert
+      delta: deltaalert
+      violet: alert_violet
+      yellow: alert_yellow
+      gamma: alert_gamma
+      epsilon: alert_epsilon
+      omicron: alert_omicron
+      octarine: alert_octarine
+      honk: alert_honk
+      amber: alert_amber
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak

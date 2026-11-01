@@ -1,0 +1,83 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: shower curtains, using Aurorastation's curtain art tinted like its shower curtains
+# (slightly see-through). They reuse Kestrel's normal curtain behaviour (BaseCurtains): click to
+# open/close, and closed curtains block sight. Mapping only: no construction recipe.
+
+- type: entity
+  abstract: true
+  parent: BaseCurtains
+  id: BaseCurtainsShower
+  name: shower curtain
+  description: Keeps the water in and the eyes out.
+
+- type: entity
+  parent: BaseCurtainsShower
+  id: CurtainsShowerBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Kestrel/Structures/Decoration/Curtains/shower_blue.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+
+- type: entity
+  parent: CurtainsShowerBlue
+  id: CurtainsShowerBlueOpen
+  suffix: Open, Blue
+  components:
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false
+
+- type: entity
+  parent: BaseCurtainsShower
+  id: CurtainsShowerOrange
+  suffix: Orange, Engineering
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Kestrel/Structures/Decoration/Curtains/shower_orange.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+
+- type: entity
+  parent: CurtainsShowerOrange
+  id: CurtainsShowerOrangeOpen
+  suffix: Open, Orange, Engineering
+  components:
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false
+
+- type: entity
+  parent: BaseCurtainsShower
+  id: CurtainsShowerRed
+  suffix: Red, Security
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Kestrel/Structures/Decoration/Curtains/shower_red.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+
+- type: entity
+  parent: CurtainsShowerRed
+  id: CurtainsShowerRedOpen
+  suffix: Open, Red, Security
+  components:
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false

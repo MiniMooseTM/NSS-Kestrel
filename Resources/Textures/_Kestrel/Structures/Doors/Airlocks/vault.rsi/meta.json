@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "icons/obj/doors/vault.dmi from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/1e4d8bd6e004e569757bfd4663f2918327ec511a (before the 3/4 perspective update). Split into SS14 airlock layers for NSS-Kestrel.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "closed"
+    },
+    {
+      "name": "open"
+    },
+    {
+      "name": "opening",
+      "delays": [
+        [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "closing",
+      "delays": [
+        [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "opening_unlit",
+      "delays": [
+        [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "closing_unlit",
+      "delays": [
+        [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "closed_unlit"
+    },
+    {
+      "name": "bolted_unlit"
+    },
+    {
+      "name": "deny_unlit",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "emergency_unlit"
+    },
+    {
+      "name": "panel_open"
+    },
+    {
+      "name": "welded"
+    },
+    {
+      "name": "sparks",
+      "delays": [
+        [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ]
+      ]
+    },
+    {
+      "name": "sparks_damaged",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          1.7
+        ]
+      ]
+    },
+    {
+      "name": "sparks_broken",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "sparks_open",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

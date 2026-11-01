@@ -1,0 +1,133 @@
+# Kestrel: security cadet uniforms. Cadets used to wear the generic red color jumpsuit (shared with
+# other jobs), so these are cadet-only copies that inherit everything from it and swap in security
+# colors: midnight blue by default, navy as the loadout alternate.
+
+- type: entity
+  parent: ClothingUniformJumpsuitColorRed
+  id: ClothingUniformJumpsuitSecurityCadet
+  name: security cadet jumpsuit
+  description: A plain midnight jumpsuit issued to security cadets. No rank markings yet.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+    layers:
+    - state: icon
+      color: "#243960"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#243960"
+      right:
+      - state: inhand-right
+        color: "#243960"
+  - type: Clothing
+    sprite: _Kestrel/Clothing/Uniforms/Jumpsuit/security_cadet.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtColorRed
+  id: ClothingUniformJumpskirtSecurityCadet
+  name: security cadet jumpskirt
+  description: A plain midnight jumpskirt issued to security cadets. No rank markings yet.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+    layers:
+    - state: icon
+      color: "#243960"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#243960"
+      right:
+      - state: inhand-right
+        color: "#243960"
+  - type: Clothing
+    sprite: _Kestrel/Clothing/Uniforms/Jumpskirt/security_cadet.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitColorRed
+  id: ClothingUniformJumpsuitSecurityCadetNavy
+  name: navy security cadet jumpsuit
+  description: A plain navy jumpsuit issued to security cadets. No rank markings yet.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/color/color.rsi
+    layers:
+    - state: icon
+      color: "#334F85"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#334F85"
+      right:
+      - state: inhand-right
+        color: "#334F85"
+  - type: Clothing
+    sprite: _Kestrel/Clothing/Uniforms/Jumpsuit/security_cadet_navy.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtColorRed
+  id: ClothingUniformJumpskirtSecurityCadetNavy
+  name: navy security cadet jumpskirt
+  description: A plain navy jumpskirt issued to security cadets. No rank markings yet.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi
+    layers:
+    - state: icon
+      color: "#334F85"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#334F85"
+      right:
+      - state: inhand-right
+        color: "#334F85"
+  - type: Clothing
+    sprite: _Kestrel/Clothing/Uniforms/Jumpskirt/security_cadet_navy.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitMilitaryColorRed
+  id: ClothingUniformJumpsuitMilitarySecurityCadet
+  name: security cadet jumpsuit
+  description: A military-cut jumpsuit with midnight blue trim, issued to security cadets.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#3e3e48"
+    - state: icon-base-top-jumpsuit
+      color: "#3e3e48"
+    - state: icon-decor-contractor
+      color: "#243960"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#3e3e48"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-left-decor-contractor
+        color: "#243960"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#3e3e48"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-right-decor-contractor
+        color: "#243960"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#3e3e48"
+      - state: equipped-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: equipped-decor-contractor
+        color: "#243960"

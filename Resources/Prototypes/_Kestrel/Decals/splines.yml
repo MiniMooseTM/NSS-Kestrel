@@ -1,0 +1,516 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: Aurorastation's spline floor trims, fancy (thin with corner studs) and plain (solid band).
+# Spline... = greyscale, tint it any colour in the decal placer.
+# SplineWood... = already tinted with Aurora's wood colour (#CB9E04).
+# Names say where the trim sits on the tile: LineS = bottom edge, LineSe = bottom and right,
+# CornerNe = small inner-corner piece in the top right, CeeOpenN = three sides, open at the top.
+
+- type: decal
+  id: SplineFancyLineS
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_s
+
+- type: decal
+  id: SplineWoodFancyLineS
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_s
+
+- type: decal
+  id: SplineFancyLineN
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_n
+
+- type: decal
+  id: SplineWoodFancyLineN
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_n
+
+- type: decal
+  id: SplineFancyLineE
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_e
+
+- type: decal
+  id: SplineWoodFancyLineE
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_e
+
+- type: decal
+  id: SplineFancyLineW
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_w
+
+- type: decal
+  id: SplineWoodFancyLineW
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_w
+
+- type: decal
+  id: SplineFancyLineSe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_se
+
+- type: decal
+  id: SplineWoodFancyLineSe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_se
+
+- type: decal
+  id: SplineFancyLineSw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_sw
+
+- type: decal
+  id: SplineWoodFancyLineSw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_sw
+
+- type: decal
+  id: SplineFancyLineNe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_ne
+
+- type: decal
+  id: SplineWoodFancyLineNe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_ne
+
+- type: decal
+  id: SplineFancyLineNw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_line_nw
+
+- type: decal
+  id: SplineWoodFancyLineNw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_line_nw
+
+- type: decal
+  id: SplineFancyCornerSe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_corner_se
+
+- type: decal
+  id: SplineWoodFancyCornerSe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_corner_se
+
+- type: decal
+  id: SplineFancyCornerNe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_corner_ne
+
+- type: decal
+  id: SplineWoodFancyCornerNe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_corner_ne
+
+- type: decal
+  id: SplineFancyCornerNw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_corner_nw
+
+- type: decal
+  id: SplineWoodFancyCornerNw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_corner_nw
+
+- type: decal
+  id: SplineFancyCornerSw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_corner_sw
+
+- type: decal
+  id: SplineWoodFancyCornerSw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_corner_sw
+
+- type: decal
+  id: SplineFancyCeeOpenN
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_cee_open_n
+
+- type: decal
+  id: SplineWoodFancyCeeOpenN
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_cee_open_n
+
+- type: decal
+  id: SplineFancyCeeOpenS
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_cee_open_s
+
+- type: decal
+  id: SplineWoodFancyCeeOpenS
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_cee_open_s
+
+- type: decal
+  id: SplineFancyCeeOpenW
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_cee_open_w
+
+- type: decal
+  id: SplineWoodFancyCeeOpenW
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_cee_open_w
+
+- type: decal
+  id: SplineFancyCeeOpenE
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_cee_open_e
+
+- type: decal
+  id: SplineWoodFancyCeeOpenE
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_cee_open_e
+
+- type: decal
+  id: SplineFancyFull
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: fancy_full
+
+- type: decal
+  id: SplineWoodFancyFull
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_fancy_full
+
+- type: decal
+  id: SplinePlainLineS
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_s
+
+- type: decal
+  id: SplineWoodPlainLineS
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_s
+
+- type: decal
+  id: SplinePlainLineN
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_n
+
+- type: decal
+  id: SplineWoodPlainLineN
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_n
+
+- type: decal
+  id: SplinePlainLineE
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_e
+
+- type: decal
+  id: SplineWoodPlainLineE
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_e
+
+- type: decal
+  id: SplinePlainLineW
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_w
+
+- type: decal
+  id: SplineWoodPlainLineW
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_w
+
+- type: decal
+  id: SplinePlainLineSe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_se
+
+- type: decal
+  id: SplineWoodPlainLineSe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_se
+
+- type: decal
+  id: SplinePlainLineSw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_sw
+
+- type: decal
+  id: SplineWoodPlainLineSw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_sw
+
+- type: decal
+  id: SplinePlainLineNe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_ne
+
+- type: decal
+  id: SplineWoodPlainLineNe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_ne
+
+- type: decal
+  id: SplinePlainLineNw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_line_nw
+
+- type: decal
+  id: SplineWoodPlainLineNw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_line_nw
+
+- type: decal
+  id: SplinePlainCornerSe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_corner_se
+
+- type: decal
+  id: SplineWoodPlainCornerSe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_corner_se
+
+- type: decal
+  id: SplinePlainCornerNe
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_corner_ne
+
+- type: decal
+  id: SplineWoodPlainCornerNe
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_corner_ne
+
+- type: decal
+  id: SplinePlainCornerNw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_corner_nw
+
+- type: decal
+  id: SplineWoodPlainCornerNw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_corner_nw
+
+- type: decal
+  id: SplinePlainCornerSw
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_corner_sw
+
+- type: decal
+  id: SplineWoodPlainCornerSw
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_corner_sw
+
+- type: decal
+  id: SplinePlainCeeOpenN
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_cee_open_n
+
+- type: decal
+  id: SplineWoodPlainCeeOpenN
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_cee_open_n
+
+- type: decal
+  id: SplinePlainCeeOpenS
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_cee_open_s
+
+- type: decal
+  id: SplineWoodPlainCeeOpenS
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_cee_open_s
+
+- type: decal
+  id: SplinePlainCeeOpenW
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_cee_open_w
+
+- type: decal
+  id: SplineWoodPlainCeeOpenW
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_cee_open_w
+
+- type: decal
+  id: SplinePlainCeeOpenE
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_cee_open_e
+
+- type: decal
+  id: SplineWoodPlainCeeOpenE
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_cee_open_e
+
+- type: decal
+  id: SplinePlainFull
+  tags: ["station", "markings"]
+  defaultCustomColor: true # greyscale art: pick a colour when placing
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: plain_full
+
+- type: decal
+  id: SplineWoodPlainFull
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Kestrel/Decals/splines.rsi
+    state: wood_plain_full

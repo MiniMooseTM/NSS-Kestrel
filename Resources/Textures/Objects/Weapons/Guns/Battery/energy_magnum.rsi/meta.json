@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-NC-SA-3.0",
-    "copyright": "Created by BoskiYourk (GitHub), edited by spanky-spanky (GitHub)",
+    "copyright": "Created by BoskiYourk (GitHub), edited by spanky-spanky (GitHub) | Modified for NSS-Kestrel: charge lights made white so the game can tint them by fire mode (red lethal, light blue stun).",
     "size": {
         "x": 32,
         "y": 32

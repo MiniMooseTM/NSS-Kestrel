@@ -104,9 +104,9 @@
     layers:
     - state: door_remotebase
     - state: door_remotelightscolour
-      color: "#cb0000"
+      color: "#283E6B" # Kestrel: was #cb0000
     - state: door_remotescreencolour
-      color: "#830000"
+      color: "#19243B" # Kestrel: was #830000
   - type: Access
     groups:
     - Security
@@ -120,9 +120,9 @@
     layers:
     - state: door_remotebase
     - state: door_remotelightscolour
-      color: "#e80000"
+      color: "#314C81" # Kestrel: was #e80000
     - state: door_remotescreencolour
-      color: "#a80000"
+      color: "#203152" # Kestrel: was #a80000
   - type: Access
     groups:
     - Armory

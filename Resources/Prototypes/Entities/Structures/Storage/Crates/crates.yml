@@ -629,11 +629,11 @@
     layers:
     - state: base
     - state: overlay
-      color: "#c12d30"
+      color: "#2A4170" # Kestrel: was #c12d30
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
-      color: "#c12d30"
+      color: "#2A4170" # Kestrel: was #c12d30
       map: [ lid_overlay ]
     - state: welded
       visible: false

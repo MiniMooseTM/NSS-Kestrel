@@ -1,0 +1,26 @@
+# Kestrel: cadet loadouts pointing at the security-colored cadet uniforms.
+
+- type: loadout
+  id: SecurityCadetJumpsuitMidnight
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecurityCadet
+
+- type: loadout
+  id: SecurityCadetJumpskirtMidnight
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSecurityCadet
+
+- type: loadout
+  id: SecurityCadetMJMidnight
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitarySecurityCadet
+
+- type: loadout
+  id: SecurityCadetJumpsuitNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecurityCadetNavy
+
+- type: loadout
+  id: SecurityCadetJumpskirtNavy
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSecurityCadetNavy

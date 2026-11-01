@@ -200,13 +200,13 @@
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-left
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/hos.rsi # Goob
       right:
       - state: inhand-right
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-right
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/hos.rsi # Goob
@@ -444,13 +444,13 @@
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-left
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/security.rsi # Goob
       right:
       - state: inhand-right
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-right
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/security.rsi # Goob
@@ -470,13 +470,13 @@
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-left
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/warden.rsi # Goob
       right:
       - state: inhand-right
-        color: "#C12D30"
+        color: "#1D2C4C" # Kestrel: was #C12D30
         sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/color/color.rsi # Goob
       - state: overlay-inhand-right
         sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Security/warden.rsi # Goob

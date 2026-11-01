@@ -1,0 +1,145 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: the blacksite's self-destruct terminal, ported from Aurorastation's
+# "scuttling device terminal". Replaces the movable nuke on Kestrel station maps.
+#
+# Underneath it's the normal SS14 nuke (NukeComponent): authentication disk, code, arm, countdown,
+# explosion, alert levels, the Captain's code paper. It's copied from NuclearBomb in
+# Entities/Structures/Machines/nuke.yml rather than inherited, so it doesn't get the nuke's wheels
+# (pulling), holiday sprites, or steal objective, none of which make sense for a bolted terminal.
+#
+# KestrelSelfDestructTerminal adds the Kestrel parts (see KestrelSelfDestructTerminalSystem):
+# the menu's anchor button is blocked, it drives the pictures below, and it spawns the 3x3 floor
+# lights while bolted down.
+# Bolting is done with tools (construction graph KestrelSelfDestructTerminal): wrench to bolt it;
+# welder, wrench and crowbar to remove it. It starts bolted down.
+
+- type: entity
+  parent: [ BaseStructure, BaseMajorContraband ]
+  id: KestrelSelfDestructTerminal
+  name: self-destruct terminal
+  description: The facility's self-destruct. It needs the authentication disk and a code. Hopefully nobody ever has both.
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _Kestrel/Structures/Machines/self_destruct_terminal.rsi
+    noRot: true
+    layers:
+    - state: idle
+      map: [ "base" ]
+  - type: Appearance
+  # The server sets KestrelSelfDestructVisuals.State; this picks the matching picture.
+  - type: GenericVisualizer
+    visuals:
+      enum.KestrelSelfDestructVisuals.State:
+        base:
+          Safe: { state: idle }             # blue: safety on
+          Ready: { state: greenlight }      # red: code accepted, ready to arm
+          Armed: { state: urgent }          # flashing red: counting down
+          Detonating: { state: exploding }  # final seconds
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 255
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  # Red spinning light while armed, same as the normal nuke (NukeSystem turns it on).
+  - type: PointLight
+    enabled: false
+    radius: 4
+    energy: 2.0
+    color: "#FF4020"
+    lightMask: ConeDouble
+  - type: RotatingLight
+    speed: 120
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: self-destruct terminal
+    enabled: false
+  - type: NukeLabel
+  # Same settings as the normal nuke.
+  - type: Nuke
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 5
+    totalIntensity: 5000000
+    diskSlot:
+      name: nuke-slot-component-slot-name-disk
+      insertSound:
+        path: /Audio/Machines/terminal_insert_disc.ogg
+      ejectSound:
+        path: /Audio/Machines/terminal_insert_disc.ogg
+      whitelist:
+        components:
+        - NukeDisk
+    alertLevelOnActivate: delta
+    alertLevelOnDeactivate: green
+    alertLevelOnOverride: omicron # Goobstation
+  - type: KestrelSelfDestructTerminal
+  # Tool bolting/unbolting (Recipes/Construction/Graphs/structures/self_destruct.yml).
+  - type: Construction
+    graph: KestrelSelfDestructTerminal
+    node: bolted
+  - type: InteractionOutline
+  - type: ActivatableUI
+    key: enum.NukeUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.NukeUiKey.Key:
+        type: NukeBoundUserInterface
+  - type: StaticPrice
+    price: 50000
+  - type: CargoSellBlacklist
+  - type: ArrivalsBlacklist
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      Nuke: !type:ContainerSlot
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: WarpPoint
+    follow: true
+    location: self-destruct terminal
+    blacklist:
+      tags:
+      - GhostOnlyWarp
+  - type: FTLSmashImmune
+  - type: SupermatterImmune # Goobstation
+
+# The circuit floor around the terminal (all nine tiles, terminal's own included): blue while safe,
+# red once the code is accepted, red and pulsing while armed.
+# Spawned and deleted by the terminal while it's bolted down; don't place it yourself.
+# It's a picture over the real floor, not a floor tile, so the map's floor is untouched.
+- type: entity
+  id: KestrelSelfDestructFloor
+  name: circuit floor
+  categories: [ HideSpawnMenu ]
+  save: false # the terminal makes a new one each round
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _Kestrel/Structures/Machines/self_destruct_floor.rsi
+    drawdepth: FloorObjects # above the floor tiles, below items, people and walls
+    noRot: true
+    layers:
+    - state: safe
+      map: [ "base" ]
+      shader: unshaded # glows in the dark
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.KestrelSelfDestructVisuals.State:
+        base:
+          Safe: { state: safe }         # blue circuitry
+          Ready: { state: on }          # red: code accepted
+          Armed: { state: anim }        # red, pulsing
+          Detonating: { state: anim }

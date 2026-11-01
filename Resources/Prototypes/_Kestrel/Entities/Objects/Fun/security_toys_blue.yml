@@ -1,0 +1,104 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: blue (Midnight) versions of the security figurines and lizard plushies, to match
+# Kestrel's blue security. The red originals are unchanged and still spawn as normal.
+#
+# Each one uses its red original as the parent and only swaps the sprite, so it keeps the same
+# name, description, voice lines, sounds and price. The "Blue" suffix only shows in the spawn
+# menu, to tell them apart. Nothing spawns these yet; add them to loadouts or spawners as wanted.
+
+# Figurines
+# The blue RSI only has the figure pictures, so the in-hand sprite is pointed back at the
+# original figurines.rsi (its generic in-hand pictures are the same for every figurine).
+
+- type: entity
+  parent: ToyFigurineHeadOfSecurity
+  id: KestrelToyFigurineHeadOfSecurityBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/figurines_blue.rsi
+  - type: Item
+    sprite: Objects/Fun/figurines.rsi
+
+- type: entity
+  parent: ToyFigurineWarden
+  id: KestrelToyFigurineWardenBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/figurines_blue.rsi
+  - type: Item
+    sprite: Objects/Fun/figurines.rsi
+
+- type: entity
+  parent: ToyFigurineDetective
+  id: KestrelToyFigurineDetectiveBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/figurines_blue.rsi
+  - type: Item
+    sprite: Objects/Fun/figurines.rsi
+
+- type: entity
+  parent: ToyFigurineSecurity
+  id: KestrelToyFigurineSecurityBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/figurines_blue.rsi
+  - type: Item
+    sprite: Objects/Fun/figurines.rsi
+
+- type: entity
+  parent: ToyFigurineBrigmedic
+  id: KestrelToyFigurineBrigmedicBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/figurines_blue.rsi
+  - type: Item
+    sprite: Objects/Fun/figurines.rsi
+
+# Lizard plushies
+# Their in-hand sprite already comes from the plain lizard plushie, so only the icon changes.
+
+- type: entity
+  parent: PlushieLizardJobHeadofsecurity
+  id: KestrelPlushieLizardJobHeadofsecurityBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/plushielizard_jobs_blue.rsi
+
+- type: entity
+  parent: PlushieLizardJobWarden
+  id: KestrelPlushieLizardJobWardenBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/plushielizard_jobs_blue.rsi
+
+- type: entity
+  parent: PlushieLizardJobDetective
+  id: KestrelPlushieLizardJobDetectiveBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/plushielizard_jobs_blue.rsi
+
+- type: entity
+  parent: PlushieLizardJobSecurityofficer
+  id: KestrelPlushieLizardJobSecurityofficerBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/plushielizard_jobs_blue.rsi
+
+- type: entity
+  parent: PlushieLizardJobSecuritycadet
+  id: KestrelPlushieLizardJobSecuritycadetBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _Kestrel/Objects/Fun/plushielizard_jobs_blue.rsi

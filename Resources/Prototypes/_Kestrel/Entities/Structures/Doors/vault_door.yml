@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: vault door, using Aurorastation's pre-3/4 vault door art. Mapping only.
+#
+# It's the upstream high-security door (HighSecDoor in Doors/Airlocks/highsec.yml) with Aurora's art:
+# armoured, maximum-security wiring, 1500 damage to destroy, access set by its door electronics.
+# Only the picture and the timing change. Aurora's open/close animation is 16 frames over 1.2 s,
+# slower and heavier than a normal door.
+
+- type: entity
+  parent: HighSecDoor
+  id: KestrelVaultDoor
+  name: vault door
+  description: A massive armoured door with a heavy locking wheel. Whatever's behind it, someone wants it kept there.
+  components:
+  # Same layers as the high-security door; the art supplies every state they use.
+  - type: Sprite
+    sprite: _Kestrel/Structures/Doors/Airlocks/vault.rsi
+  # 1.2 s, matching the art. Walkable 0.8 s into opening (once the wheel has swung clear), and
+  # solid again 0.4 s into closing (the same as a normal door); the rest is the animation finishing.
+  - type: Door
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openTimeOne: 0.8
+    openTimeTwo: 0.4
+    closeTimeOne: 0.4
+    closeTimeTwo: 0.8
+  - type: Airlock
+    emergencyAccessLayer: false # no emergency-access light in this art
+    animatePanel: false # the panel has no opening/closing animation in this art

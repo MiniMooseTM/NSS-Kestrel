@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "disposal_small states from icons/obj/disposals.dmi, Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/1e4d8bd6e004e569757bfd4663f2918327ec511a (before the 3/4 perspective update). Renamed to SS14 disposal unit states for NSS-Kestrel.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "condisposal",
+      "directions": 4
+    },
+    {
+      "name": "disposal",
+      "directions": 4
+    },
+    {
+      "name": "disposal-charging",
+      "directions": 4
+    },
+    {
+      "name": "disposal-flush",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.5,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.5,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.5,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.5,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "dispover-charge",
+      "directions": 4,
+      "delays": [
+        [
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "dispover-ready",
+      "directions": 4
+    },
+    {
+      "name": "dispover-full",
+      "directions": 4
+    },
+    {
+      "name": "dispover-handle",
+      "directions": 4
+    }
+  ]
+}

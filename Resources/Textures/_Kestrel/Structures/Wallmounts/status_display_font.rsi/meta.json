@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "icons/obj/status_display.dmi from Aurorastation/Aurora.3 at commit https://github.com/Aurorastation/Aurora.3/commit/0af897637c7f. Single-character states, moved to the screen's first text slot, for NSS-Kestrel.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "char_space"
+    },
+    {
+      "name": "char_tilde",
+      "delays": [
+        [
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "char_colon"
+    },
+    {
+      "name": "char_apostrophe"
+    },
+    {
+      "name": "char_lparen"
+    },
+    {
+      "name": "char_rparen"
+    },
+    {
+      "name": "char_star"
+    },
+    {
+      "name": "char_plus"
+    },
+    {
+      "name": "char_equals"
+    },
+    {
+      "name": "char_slash"
+    },
+    {
+      "name": "char_period"
+    },
+    {
+      "name": "char_comma"
+    },
+    {
+      "name": "char_dash"
+    },
+    {
+      "name": "char_question"
+    },
+    {
+      "name": "char_exclaim"
+    },
+    {
+      "name": "char_0"
+    },
+    {
+      "name": "char_1"
+    },
+    {
+      "name": "char_2"
+    },
+    {
+      "name": "char_3"
+    },
+    {
+      "name": "char_4"
+    },
+    {
+      "name": "char_5"
+    },
+    {
+      "name": "char_6"
+    },
+    {
+      "name": "char_7"
+    },
+    {
+      "name": "char_8"
+    },
+    {
+      "name": "char_9"
+    },
+    {
+      "name": "char_A"
+    },
+    {
+      "name": "char_B"
+    },
+    {
+      "name": "char_C"
+    },
+    {
+      "name": "char_D"
+    },
+    {
+      "name": "char_E"
+    },
+    {
+      "name": "char_F"
+    },
+    {
+      "name": "char_G"
+    },
+    {
+      "name": "char_H"
+    },
+    {
+      "name": "char_I"
+    },
+    {
+      "name": "char_J"
+    },
+    {
+      "name": "char_K"
+    },
+    {
+      "name": "char_L"
+    },
+    {
+      "name": "char_M"
+    },
+    {
+      "name": "char_N"
+    },
+    {
+      "name": "char_O"
+    },
+    {
+      "name": "char_P"
+    },
+    {
+      "name": "char_Q"
+    },
+    {
+      "name": "char_R"
+    },
+    {
+      "name": "char_S"
+    },
+    {
+      "name": "char_T"
+    },
+    {
+      "name": "char_U"
+    },
+    {
+      "name": "char_V"
+    },
+    {
+      "name": "char_W"
+    },
+    {
+      "name": "char_X"
+    },
+    {
+      "name": "char_Y"
+    },
+    {
+      "name": "char_Z"
+    }
+  ]
+}

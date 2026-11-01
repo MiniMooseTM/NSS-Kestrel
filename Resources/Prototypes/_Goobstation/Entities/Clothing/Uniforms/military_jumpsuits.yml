@@ -98,7 +98,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor-tac
-      color: "#A52F29"
+      color: "#19253F" # Kestrel: was #A52F29
     - state: icon-belt-buckle
       color: "#D6D3D9"
   - type: Item
@@ -109,7 +109,7 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-left-belt-buckle
         color: "#D6D3D9"
       right:
@@ -118,7 +118,7 @@
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-right-belt-buckle
         color: "#D6D3D9"
   - type: Clothing
@@ -130,7 +130,7 @@
       - state: equipped-base-top-jumpsuit-tac
         color: "#3e3e48"
       - state: equipped-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: equipped-belt-buckle
         color: "#D6D3D9"
 
@@ -149,7 +149,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor-tac
-      color: "#A52F29"
+      color: "#19253F" # Kestrel: was #A52F29
     - state: icon-belt-buckle
       color: "#D6D3D9"
     - state: icon-decor-shoulder-patch
@@ -162,7 +162,7 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-left-belt-buckle
         color: "#D6D3D9"
       - state: inhand-left-decor-shoulder-patch
@@ -173,7 +173,7 @@
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-right-belt-buckle
         color: "#D6D3D9"
       - state: inhand-right-decor-shoulder-patch
@@ -187,7 +187,7 @@
       - state: equipped-base-top-jumpsuit-tac
         color: "#3e3e48"
       - state: equipped-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: equipped-belt-buckle
         color: "#D6D3D9"
       - state: equipped-decor-shoulder-patch
@@ -324,7 +324,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor-tac
-      color: "#A52F29"
+      color: "#19253F" # Kestrel: was #A52F29
     - state: icon-belt-buckle
       color: "#f8c670"
     - state: icon-decor-epaulets
@@ -337,7 +337,7 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-left-belt-buckle
         color: "#f8c670"
       - state: inhand-left-decor-epaulets
@@ -348,7 +348,7 @@
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-right-belt-buckle
         color: "#f8c670"
       - state: inhand-right-decor-epaulets
@@ -362,7 +362,7 @@
       - state: equipped-base-top-jumpsuit-tac
         color: "#3e3e48"
       - state: equipped-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: equipped-belt-buckle
         color: "#f8c670"
       - state: equipped-decor-epaulets
@@ -454,7 +454,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-contractor-tac
-      color: "#A52F29"
+      color: "#19253F" # Kestrel: was #A52F29
     - state: icon-belt-buckle
       color: "#D6D3D9"
     - state: icon-decor-epaulets
@@ -467,7 +467,7 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-left-belt-buckle
         color: "#D6D3D9"
       - state: inhand-left-decor-epaulets
@@ -478,7 +478,7 @@
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: inhand-right-belt-buckle
         color: "#D6D3D9"
       - state: inhand-right-decor-epaulets
@@ -492,7 +492,7 @@
       - state: equipped-base-top-jumpsuit-tac
         color: "#3e3e48"
       - state: equipped-decor-contractor-tac
-        color: "#A52F29"
+        color: "#19253F" # Kestrel: was #A52F29
       - state: equipped-belt-buckle
         color: "#D6D3D9"
       - state: equipped-decor-epaulets
@@ -507,25 +507,25 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
     layers:
     - state: icon-base-bottom
-      color: "#553022"
+      color: "#0F1421" # Kestrel: was #553022
     - state: icon-base-top-turtleneck
-      color: "#dd2218"
+      color: "#22355A" # Kestrel: was #dd2218
     - state: icon-decor-shoulder-patch
       color: "#EEEEEE"
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-base-bottom
-        color: "#553022"
+        color: "#0F1421" # Kestrel: was #553022
       - state: inhand-left-base-top-turtleneck
-        color: "#dd2218"
+        color: "#22355A" # Kestrel: was #dd2218
       - state: inhand-left-decor-shoulder-patch
         color: "#EEEEEE"
       right:
       - state: inhand-right-base-bottom
-        color: "#553022"
+        color: "#0F1421" # Kestrel: was #553022
       - state: inhand-right-base-top-turtleneck
-        color: "#dd2218"
+        color: "#22355A" # Kestrel: was #dd2218
       - state: inhand-right-decor-shoulder-patch
         color: "#EEEEEE"
   - type: Clothing
@@ -533,8 +533,8 @@
     clothingVisuals:
       jumpsuit:
       - state: equipped-base-bottom
-        color: "#553022"
+        color: "#0F1421" # Kestrel: was #553022
       - state: equipped-base-top-turtleneck-alt
-        color: "#dd2218"
+        color: "#22355A" # Kestrel: was #dd2218
       - state: equipped-decor-shoulder-patch
         color: "#EEEEEE"

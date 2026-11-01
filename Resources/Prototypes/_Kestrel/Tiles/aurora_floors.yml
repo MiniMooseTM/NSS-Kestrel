@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: Aurorastation's large reinforced floor and tiled floors (current Aurora art, icons/turf/flooring/tiles.dmi).
+# Found in the mapping tile menu under these names.
+#
+# The large reinforced floor uses the same rules as the upstream reinforced floor (FloorReinforced):
+# it counts as reinforced (harder to tear up) and drops a metal rod when removed.
+# (Aurora's regular reinforced floor isn't ported: the upstream FloorReinforced already covers it.)
+# The tiled floors use the upstream dark/steel floor rules and drop those tile items, so a pried-up
+# tile goes back down as the upstream design (there's no Aurora tile item).
+
+- type: tile
+  id: FloorKestrelReinforcedLarge
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-reinforced-large
+  sprite: /Textures/_Kestrel/Tiles/aurora_reinforced_large.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: PartRodMetal1
+  reinforced: true # Goob, same as FloorReinforced
+
+- type: tile
+  id: FloorKestrelDarkTiled
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-dark-tiled
+  sprite: /Textures/_Kestrel/Tiles/aurora_dark_tiled.png
+  itemDrop: FloorTileItemDark
+  tileRipResistance: 100 # same as FloorDark
+
+- type: tile
+  id: FloorKestrelTiled
+  parent: BaseStationTile
+  name: kestrel-tiles-aurora-tiled
+  sprite: /Textures/_Kestrel/Tiles/aurora_tiled.png
+  itemDrop: FloorTileItemSteel

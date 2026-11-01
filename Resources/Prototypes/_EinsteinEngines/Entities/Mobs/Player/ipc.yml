@@ -159,6 +159,7 @@
         Slash: -15
   - type: DamagedSiliconAccent
   - type: Uncloneable
+  - type: KestrelDamageLeak # Kestrel: leaks machine oil when cut or stabbed (cosmetic, no bloodstream)
   - type: OwnInteractionVerbs
     allowedVerbs: []
   - type: Sprinter # Goob Change: slight nerf to speed because heavy robot, mass contest when

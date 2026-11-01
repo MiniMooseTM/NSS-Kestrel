@@ -1,0 +1,336 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: coloured light tubes and bulbs. A powered light takes its colour, brightness and reach from
+# the tube or bulb in it.
+#
+# Two sets:
+#  - KestrelLightTube* / KestrelLightBulb*: full strength, same as the plain LightTube / LightBulb.
+#    For normal ceiling and wall lights.
+#  - KestrelFloorLightTube* / KestrelFloorLightBulb*: dim, short-reaching "accent" versions used by
+#    the in-floor lights, so they mark paths and edges without lighting the whole room.
+# "White" matches the plain tube/bulb colour so it blends in with the station's other lights.
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeWhite
+  name: white light tube
+  components:
+  - type: LightBulb
+    color: "#FFE4CE"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeBlue
+  name: blue light tube
+  components:
+  - type: LightBulb
+    color: "#4D8CFF"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeRed
+  name: red light tube
+  components:
+  - type: LightBulb
+    color: "#FF4040"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeGreen
+  name: green light tube
+  components:
+  - type: LightBulb
+    color: "#40FF60"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeYellow
+  name: yellow light tube
+  components:
+  - type: LightBulb
+    color: "#FFE040"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubePurple
+  name: purple light tube
+  components:
+  - type: LightBulb
+    color: "#B060FF"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeOrange
+  name: orange light tube
+  components:
+  - type: LightBulb
+    color: "#FF9030"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubeCyan
+  name: cyan light tube
+  components:
+  - type: LightBulb
+    color: "#40F0FF"
+
+- type: entity
+  parent: LightTube
+  id: KestrelLightTubePink
+  name: pink light tube
+  components:
+  - type: LightBulb
+    color: "#FF70C0"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbWhite
+  name: white light bulb
+  components:
+  - type: LightBulb
+    color: "#FFD1A3"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbBlue
+  name: blue light bulb
+  components:
+  - type: LightBulb
+    color: "#4D8CFF"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbRed
+  name: red light bulb
+  components:
+  - type: LightBulb
+    color: "#FF4040"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbGreen
+  name: green light bulb
+  components:
+  - type: LightBulb
+    color: "#40FF60"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbYellow
+  name: yellow light bulb
+  components:
+  - type: LightBulb
+    color: "#FFE040"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbPurple
+  name: purple light bulb
+  components:
+  - type: LightBulb
+    color: "#B060FF"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbOrange
+  name: orange light bulb
+  components:
+  - type: LightBulb
+    color: "#FF9030"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbCyan
+  name: cyan light bulb
+  components:
+  - type: LightBulb
+    color: "#40F0FF"
+
+- type: entity
+  parent: LightBulb
+  id: KestrelLightBulbPink
+  name: pink light bulb
+  components:
+  - type: LightBulb
+    color: "#FF70C0"
+
+# Floor (accent) versions: about half strength and a much shorter reach.
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeWhite
+  name: white floor light tube
+  components:
+  - type: LightBulb
+    color: "#FFE4CE"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeBlue
+  name: blue floor light tube
+  components:
+  - type: LightBulb
+    color: "#4D8CFF"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeRed
+  name: red floor light tube
+  components:
+  - type: LightBulb
+    color: "#FF4040"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeGreen
+  name: green floor light tube
+  components:
+  - type: LightBulb
+    color: "#40FF60"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeYellow
+  name: yellow floor light tube
+  components:
+  - type: LightBulb
+    color: "#FFE040"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubePurple
+  name: purple floor light tube
+  components:
+  - type: LightBulb
+    color: "#B060FF"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeOrange
+  name: orange floor light tube
+  components:
+  - type: LightBulb
+    color: "#FF9030"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubeCyan
+  name: cyan floor light tube
+  components:
+  - type: LightBulb
+    color: "#40F0FF"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightTube
+  id: KestrelFloorLightTubePink
+  name: pink floor light tube
+  components:
+  - type: LightBulb
+    color: "#FF70C0"
+    lightRadius: 4 # ceiling tubes: 10
+    lightEnergy: 0.5 # ceiling tubes: 0.8
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbWhite
+  name: white floor light bulb
+  components:
+  - type: LightBulb
+    color: "#FFD1A3"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbBlue
+  name: blue floor light bulb
+  components:
+  - type: LightBulb
+    color: "#4D8CFF"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbRed
+  name: red floor light bulb
+  components:
+  - type: LightBulb
+    color: "#FF4040"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbGreen
+  name: green floor light bulb
+  components:
+  - type: LightBulb
+    color: "#40FF60"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbYellow
+  name: yellow floor light bulb
+  components:
+  - type: LightBulb
+    color: "#FFE040"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbPurple
+  name: purple floor light bulb
+  components:
+  - type: LightBulb
+    color: "#B060FF"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbOrange
+  name: orange floor light bulb
+  components:
+  - type: LightBulb
+    color: "#FF9030"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbCyan
+  name: cyan floor light bulb
+  components:
+  - type: LightBulb
+    color: "#40F0FF"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1
+
+- type: entity
+  parent: LightBulb
+  id: KestrelFloorLightBulbPink
+  name: pink floor light bulb
+  components:
+  - type: LightBulb
+    color: "#FF70C0"
+    lightRadius: 2.5 # normal bulbs: 6
+    lightEnergy: 0.5 # normal bulbs: 1

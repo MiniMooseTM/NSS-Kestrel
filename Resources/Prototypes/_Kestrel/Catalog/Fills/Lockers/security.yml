@@ -1,0 +1,49 @@
+﻿# SPDX-License-Identifier: AGPL-3.0-or-later
+# Kestrel: security gun safes.
+
+# Lethal shotgun ammunition only.
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband]
+  id: KestrelGunSafeShotgunAmmoLethal
+  name: shotgun ammunition safe
+  suffix: Lethal
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: KestrelFillGunSafeShotgunAmmoLethal
+  - type: EntityStorage
+    whitelist:
+      sizes:
+      - Tiny
+      - Small
+      - Normal
+
+- type: entityTable
+  id: KestrelFillGunSafeShotgunAmmoLethal
+  table: !type:AllSelector
+    children:
+    - id: BoxLethalshot
+      amount: 5
+    - id: BoxShotgunSlug
+      amount: 2
+# Kammerer Non-lethal locker/gun itself.
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband]
+  id: KestrelGunSafeWeaponShotgunKammererBeanbag
+  name: kammerer safe
+  suffix: Non-Lethal
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: KestrelFillGunSafeWeaponShotgunKammererBeanbag
+
+- type: entityTable
+  id: KestrelFillGunSafeWeaponShotgunKammererBeanbag
+  table: !type:AllSelector
+    children:
+    - id: WeaponShotgunKammererBeanbag
+      amount: 3
+    - id: BoxBeanbag             # spare beanbag shells
+      amount: 4
